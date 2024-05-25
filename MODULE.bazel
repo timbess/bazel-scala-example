@@ -24,6 +24,11 @@ maven.install(
     artifacts = [
         "org.seleniumhq.selenium:selenium-java:4.16.1",
         "org.apache.pekko:pekko-http_3:1.0.1",
+        "org.apache.pekko:pekko-actor_3:1.0.1",
+        "org.apache.pekko:pekko-actor-typed_3:1.0.1",
+        "org.apache.pekko:pekko-stream_3:1.0.1",
+        "org.slf4j:slf4j-api:2.0.13",
+        "ch.qos.logback:logback-classic:1.3.6",
     ],
     repositories = [
         "https://repo1.maven.org/maven2",

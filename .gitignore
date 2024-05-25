@@ -2,3 +2,7 @@
 .metals/
 .scala-build/
 .vscode/
+.bazelbsp/
+.bsp/
+.bazel-cache/
+projectview.bazelproject

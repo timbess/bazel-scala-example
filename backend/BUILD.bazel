@@ -1,17 +1,26 @@
-load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary")
+load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary", "scala_library")
 
-# scala_library(
-#     name = "lib",
-#     srcs = ["main.scala"],
-#     deps = [],
-# )
+scala_library(
+    name = "lib",
+    srcs = ["lib.scala"],
+    deps = [],
+)
 
 scala_binary(
     name = "main",
     srcs = ["main.scala"],
-    main_class = "com.github.timbess.hello",
+    main_class = "com.github.timbess.ActorHierarchyExperiments",
+    runtime_deps = [
+        "@mvn//:ch_qos_logback_logback_classic",
+    ],
     deps = [
+        ":lib",
+        "@mvn//:org_slf4j_slf4j_api",
+        "@mvn//:com_typesafe_config",
+        "@mvn//:org_apache_pekko_pekko_actor_3",
+        "@mvn//:org_apache_pekko_pekko_actor_typed_3",
         "@mvn//:org_apache_pekko_pekko_http_3",
-        "@mvn//:org_seleniumhq_selenium_selenium_java",
+        "@mvn//:org_apache_pekko_pekko_http_core_3",
+        "@mvn//:org_apache_pekko_pekko_stream_3",
     ],
 )
