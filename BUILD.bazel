@@ -3,8 +3,7 @@ load("@io_bazel_rules_scala//scala:scala_toolchain.bzl", "scala_toolchain")
 scala_toolchain(
     name = "semanticdb_toolchain_impl",
     enable_semanticdb = True,
-    semanticdb_bundle_in_jar = True,
-    dependency_mode = "transitive",
+    semanticdb_bundle_in_jar = False,
     visibility = ["//visibility:public"],
 )
 
