@@ -1,0 +1,4 @@
+.bazel/
+.metals/
+.scala-build/
+.vscode/

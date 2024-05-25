@@ -1,0 +1,17 @@
+load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary")
+
+# scala_library(
+#     name = "lib",
+#     srcs = ["main.scala"],
+#     deps = [],
+# )
+
+scala_binary(
+    name = "main",
+    srcs = ["main.scala"],
+    main_class = "com.github.timbess.hello",
+    deps = [
+        "@mvn//:org_apache_pekko_pekko_http_3",
+        "@mvn//:org_seleniumhq_selenium_selenium_java",
+    ],
+)

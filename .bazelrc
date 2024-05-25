@@ -1,0 +1,8 @@
+common --symlink_prefix=.bazel/
+common --enable_platform_specific_config
+
+build:macos --config=unix
+build:linux --config=unix
+
+build:unix --incompatible_enable_cc_toolchain_resolution
+build:unix --action_env BAZEL_DO_NOT_DETECT_CPP_TOOLCHAIN=1

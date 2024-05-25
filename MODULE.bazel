@@ -1,0 +1,37 @@
+bazel_dep(name = "bazel_skylib", version = "1.6.1")
+bazel_dep(name = "rules_java", version = "7.6.1")
+bazel_dep(name = "rules_jvm_external", version = "6.1")
+bazel_dep(name = "toolchains_llvm", version = "1.0.0")
+
+# C/C++ Section
+
+llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
+llvm.toolchain(
+    llvm_version = "16.0.0",
+)
+
+use_repo(llvm, "llvm_toolchain")
+# use_repo(llvm, "llvm_toolchain_llvm") # if you depend on specific tools in scripts
+
+register_toolchains("@llvm_toolchain//:all")
+
+# JVM Section
+
+maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
+
+maven.install(
+    name = "mvn",
+    artifacts = [
+        "org.seleniumhq.selenium:selenium-java:4.16.1",
+        "org.apache.pekko:pekko-http_3:1.0.1",
+    ],
+    repositories = [
+        "https://repo1.maven.org/maven2",
+    ],
+    lock_file = "//:maven_install.json",
+)
+
+use_repo(
+    maven,
+    "mvn",
+)
