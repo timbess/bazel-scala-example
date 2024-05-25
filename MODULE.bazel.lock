@@ -81,6 +81,28 @@
   },
   "selectedYankedVersions": {},
   "moduleExtensions": {
+    "//bazel:extensions.bzl%constants": {
+      "general": {
+        "bzlTransitiveDigest": "50rhJ+who0tK6CubIxQy2xsKiwoZLIOfL9v6HeZu1kA=",
+        "usagesDigest": "EPGmJWZLuCLfszx/s6cjl4XM/zs79lJRyF26iAGN09Y=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "constants": {
+            "bzlFile": "@@//bazel:extensions.bzl",
+            "ruleClassName": "create_vars",
+            "attributes": {
+              "vars": {
+                "SCALA_VERSION": "2.13",
+                "SCALA_FULL_VERSION": "2.13.12"
+              }
+            }
+          }
+        },
+        "recordedRepoMappingEntries": []
+      }
+    },
     "@@apple_support~//crosstool:setup.bzl%apple_cc_configure_extension": {
       "general": {
         "bzlTransitiveDigest": "PjIds3feoYE8SGbbIq2SFTZy3zmxeO2tQevJZNDo7iY=",
@@ -155,10 +177,10 @@
     "@@rules_jvm_external~//:extensions.bzl%maven": {
       "general": {
         "bzlTransitiveDigest": "wGT7rRufBRVoXr38hFv79t0cgbRCCarWhdOZRsZfqvQ=",
-        "usagesDigest": "xxtzv3G/wEl0h3zVh26QIOA5d1a6IvbCEiMRxLGMQO0=",
+        "usagesDigest": "pK0QSkfsbVQAto61rsF3z9iI12yd9r1e/d4GT/SPORA=",
         "recordedFileInputs": {
           "@@rules_jvm_external~//rules_jvm_external_deps_install.json": "0bfbc915d9155df44d7a3b216e8f3c1fbcd110e358dd07637dc393583a5227e8",
-          "@@//maven_install.json": "ffc775b21829a5100086d87b39decb19f7e5980f9c6d0266933a8a9f038ed14a"
+          "@@//maven_install.json": "553aae0f2b4b83bee231f10912f070ea5dbe78a96c4bf84c38c5e92dafb35724"
         },
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -239,10 +261,10 @@
               ],
               "artifacts": [
                 "{ \"group\": \"org.seleniumhq.selenium\", \"artifact\": \"selenium-java\", \"version\": \"4.16.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-stream_3\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-stream_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.slf4j\", \"artifact\": \"slf4j-api\", \"version\": \"2.0.13\" }",
                 "{ \"group\": \"ch.qos.logback\", \"artifact\": \"logback-classic\", \"version\": \"1.3.6\" }"
               ],
@@ -407,6 +429,17 @@
                 "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1.jar"
               ],
               "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1.jar"
+            }
+          },
+          "org_apache_pekko_pekko_protobuf_v3_2_13_jar_sources_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "55c103e0ec1378adb127c8928e599cca0760a2228abe93d924b2637263fd8f21",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-protobuf-v3_2.13/1.0.1/pekko-protobuf-v3_2.13-1.0.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-protobuf-v3_2.13/1.0.1/pekko-protobuf-v3_2.13-1.0.1-sources.jar"
             }
           },
           "org_apache_maven_resolver_maven_resolver_transport_file_1_9_18": {
@@ -838,6 +871,17 @@
               "downloaded_file_path": "v1/com/google/auto/value/auto-value-annotations/1.10.4/auto-value-annotations-1.10.4.jar"
             }
           },
+          "com_typesafe_ssl_config_core_2_13_0_6_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "478d7a888fddc5a3f714e5ff1b665090ed9bb45cca6278c7cc94e4514a12067b",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1.jar"
+              ],
+              "downloaded_file_path": "v1/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1.jar"
+            }
+          },
           "org_seleniumhq_selenium_selenium_devtools_v119_jar_sources_4_16_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1005,17 +1049,6 @@
                 "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1.jar"
               ],
               "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1.jar"
-            }
-          },
-          "org_apache_pekko_pekko_slf4j_3_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "905d8d766d2b677db8c9f5506dd6293b3fb393e8b736f76c9b1b2815bd49e4b4",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-slf4j_3/1.0.1/pekko-slf4j_3-1.0.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-slf4j_3/1.0.1/pekko-slf4j_3-1.0.1.jar"
             }
           },
           "com_google_auth_google_auth_library_oauth2_http_1_23_0": {
@@ -1216,26 +1249,15 @@
               "downloaded_file_path": "v1/org/apache/maven/maven-settings/3.9.6/maven-settings-3.9.6.jar"
             }
           },
-          "org_apache_pekko_pekko_actor_3_jar_sources_1_0_1": {
+          "org_apache_pekko_pekko_parsing_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "468be288e45a8cd4e2f785fb64ba8ccf23d4f7881b3c21de515f4867ceb79dd9",
+              "sha256": "93f6d444cc512292c1de39ad032c27a18e498e2b6cf54c6e93e598790b6cc771",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor_3/1.0.1/pekko-actor_3-1.0.1-sources.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-parsing_2.13/1.0.1/pekko-parsing_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor_3/1.0.1/pekko-actor_3-1.0.1-sources.jar"
-            }
-          },
-          "org_apache_pekko_pekko_http_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "c5350697809b24662b04204b8c9d9569bc670a626023b98b7d20025111797e4f",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http_3/1.0.1/pekko-http_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-http_3/1.0.1/pekko-http_3-1.0.1-sources.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-parsing_2.13/1.0.1/pekko-parsing_2.13-1.0.1-sources.jar"
             }
           },
           "org_apache_maven_maven_settings_jar_sources_3_9_6": {
@@ -1513,17 +1535,6 @@
               "downloaded_file_path": "v1/io/grpc/grpc-stub/1.62.2/grpc-stub-1.62.2.jar"
             }
           },
-          "org_scala_lang_scala3_library_3_3_3_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "b64c13c1f3d1ac2323457ec6cc09e9b38d7a9ef6889a1a0063601bf25d545508",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar"
-            }
-          },
           "com_google_cloud_google_cloud_core_http_2_36_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1544,17 +1555,6 @@
                 "https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.jar"
               ],
               "downloaded_file_path": "v1/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.jar"
-            }
-          },
-          "org_parboiled_parboiled_3_jar_sources_2_5_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "6e3826fca0af052c7373e24b209111cdb0277cb5816769ba34ba44840d451536",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/parboiled/parboiled_3/2.5.0/parboiled_3-2.5.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/parboiled/parboiled_3/2.5.0/parboiled_3-2.5.0-sources.jar"
             }
           },
           "software_amazon_awssdk_utils_jar_sources_2_25_23": {
@@ -1733,15 +1733,15 @@
               "downloaded_file_path": "v1/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M2/org.eclipse.sisu.plexus-0.9.0.M2-sources.jar"
             }
           },
-          "com_typesafe_ssl_config_core_3_jar_sources_0_6_1": {
+          "org_apache_pekko_pekko_http_2_13_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "d0e59959a72fc06a37d9d9fc3698de1ef89de954f52385392021148395fb9f09",
+              "sha256": "08dcc9cbd396e64052d9e61a60dbda6faa04a54d80fc79e1632bc441c7d4f4ac",
               "urls": [
-                "https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_3/0.6.1/ssl-config-core_3-0.6.1-sources.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http_2.13/1.0.1/pekko-http_2.13-1.0.1.jar"
               ],
-              "downloaded_file_path": "v1/com/typesafe/ssl-config-core_3/0.6.1/ssl-config-core_3-0.6.1-sources.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-http_2.13/1.0.1/pekko-http_2.13-1.0.1.jar"
             }
           },
           "org_codehaus_plexus_plexus_utils_3_5_1": {
@@ -1854,15 +1854,15 @@
               "downloaded_file_path": "v1/io/grpc/grpc-rls/1.62.2/grpc-rls-1.62.2.jar"
             }
           },
-          "org_apache_pekko_pekko_stream_3_jar_sources_1_0_1": {
+          "org_apache_pekko_pekko_slf4j_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "0a016474134a456c175ac03ee4d81967436f4437f7cb723ed9b35ddef4a9aef5",
+              "sha256": "6b5ee4c58896d16871c430df5187f96c5ea15e9330876e43af710d3fd23cfb27",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-stream_3/1.0.1/pekko-stream_3-1.0.1-sources.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-slf4j_2.13/1.0.1/pekko-slf4j_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-stream_3/1.0.1/pekko-stream_3-1.0.1-sources.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-slf4j_2.13/1.0.1/pekko-slf4j_2.13-1.0.1-sources.jar"
             }
           },
           "io_grpc_grpc_netty_shaded_jar_sources_1_62_2": {
@@ -1929,6 +1929,17 @@
                 "https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4-sources.jar"
               ],
               "downloaded_file_path": "v1/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4-sources.jar"
+            }
+          },
+          "org_parboiled_parboiled_2_13_2_5_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "a1f35d80018228d77a0a57fafcd968010dc310edbf61801330ff822399218c2c",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/parboiled/parboiled_2.13/2.5.0/parboiled_2.13-2.5.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/parboiled/parboiled_2.13/2.5.0/parboiled_2.13-2.5.0.jar"
             }
           },
           "com_fasterxml_jackson_core_jackson_core_jar_sources_2_17_0": {
@@ -2006,6 +2017,17 @@
                 "https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar"
               ],
               "downloaded_file_path": "v1/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar"
+            }
+          },
+          "org_parboiled_parboiled_2_13_jar_sources_2_5_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "96137f0347cb25ee5f5effe3c96ac14c39d5d31f1febccd322b68751edd4cf3c",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/parboiled/parboiled_2.13/2.5.0/parboiled_2.13-2.5.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/parboiled/parboiled_2.13/2.5.0/parboiled_2.13-2.5.0-sources.jar"
             }
           },
           "software_amazon_awssdk_protocol_core_2_25_23": {
@@ -2118,17 +2140,6 @@
               "downloaded_file_path": "v1/com/google/apis/google-api-services-storage/v1-rev20240311-2.0.0/google-api-services-storage-v1-rev20240311-2.0.0.jar"
             }
           },
-          "org_apache_pekko_pekko_slf4j_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "6b5ee4c58896d16871c430df5187f96c5ea15e9330876e43af710d3fd23cfb27",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-slf4j_3/1.0.1/pekko-slf4j_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-slf4j_3/1.0.1/pekko-slf4j_3-1.0.1-sources.jar"
-            }
-          },
           "io_opentelemetry_opentelemetry_semconv_jar_sources_1_28_0_alpha": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2138,6 +2149,17 @@
                 "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha-sources.jar"
               ],
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_http_core_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "af68596999d7b6a8aaa854bc612cc1b8353cd9996c44a253a49b97586363df4a",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http-core_2.13/1.0.1/pekko-http-core_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-http-core_2.13/1.0.1/pekko-http-core_2.13-1.0.1.jar"
             }
           },
           "javax_inject_javax_inject_1": {
@@ -2248,6 +2270,17 @@
                 "https://repo1.maven.org/maven2/com/google/http-client/google-http-client-jackson2/1.44.1/google-http-client-jackson2-1.44.1.jar"
               ],
               "downloaded_file_path": "v1/com/google/http-client/google-http-client-jackson2/1.44.1/google-http-client-jackson2-1.44.1.jar"
+            }
+          },
+          "org_apache_pekko_pekko_actor_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "89cf0c1f947fa62b7cf177e5aee389ef6c96a2f2070c0454e43310a1b08377da",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor_2.13/1.0.1/pekko-actor_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor_2.13/1.0.1/pekko-actor_2.13-1.0.1.jar"
             }
           },
           "io_opentelemetry_opentelemetry_exporter_logging_jar_sources_1_28_0": {
@@ -2739,15 +2772,15 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar"
             }
           },
-          "org_apache_pekko_pekko_http_3_1_0_1": {
+          "org_apache_pekko_pekko_actor_typed_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "efaa767f6c4b233fb631d58c8f05634f20577d7372276f7238bd216ef1960f82",
+              "sha256": "5a751d70ec61d426722e009b7c5308d1b83ad223edf5611b91d7ddfedbb6ed65",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http_3/1.0.1/pekko-http_3-1.0.1.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor-typed_2.13/1.0.1/pekko-actor-typed_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-http_3/1.0.1/pekko-http_3-1.0.1.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor-typed_2.13/1.0.1/pekko-actor-typed_2.13-1.0.1-sources.jar"
             }
           },
           "com_google_http_client_google_http_client_gson_1_44_1": {
@@ -2948,17 +2981,6 @@
               "downloaded_file_path": "v1/org/threeten/threetenbp/1.6.8/threetenbp-1.6.8-sources.jar"
             }
           },
-          "org_scala_lang_scala3_library_3_jar_sources_3_3_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "83fe3f107e11c2d316c2346504aa8672968e953d2a9f51e3ea2d924b748ce50a",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1-sources.jar"
-            }
-          },
           "javax_annotation_javax_annotation_api_1_3_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3124,6 +3146,17 @@
               "downloaded_file_path": "v1/org/codehaus/plexus/plexus-classworlds/2.7.0/plexus-classworlds-2.7.0.jar"
             }
           },
+          "org_scala_lang_scala_library_jar_sources_2_13_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "df3f19e71b4d2dd6bb882a6deafb31c7dceaad4f26489b9fd9ca56b493229174",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12-sources.jar"
+            }
+          },
           "org_checkerframework_checker_qual_3_33_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3179,15 +3212,15 @@
               "downloaded_file_path": "v1/com/google/guava/guava/33.1.0-jre/guava-33.1.0-jre-sources.jar"
             }
           },
-          "org_scala_lang_scala_library_jar_sources_2_13_10": {
+          "org_apache_pekko_pekko_actor_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "a991527579c81765cc74ecdbf57fe8fda9c1fd88fceebf19266f030e456ee0f0",
+              "sha256": "2f860f5c27ffa777c7dbd2c2c10486cc19c875157a577d56b60a59ceb4d661e7",
               "urls": [
-                "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10-sources.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor_2.13/1.0.1/pekko-actor_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10-sources.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor_2.13/1.0.1/pekko-actor_2.13-1.0.1-sources.jar"
             }
           },
           "unpinned_rules_jvm_external_deps": {
@@ -3248,15 +3281,15 @@
               "ignore_empty_files": false
             }
           },
-          "org_apache_pekko_pekko_actor_3_1_0_1": {
+          "org_apache_pekko_pekko_http_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "49d26b79fe067610817919df53e33211735995b7031f07030fda277013d764a6",
+              "sha256": "c5350697809b24662b04204b8c9d9569bc670a626023b98b7d20025111797e4f",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor_3/1.0.1/pekko-actor_3-1.0.1.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http_2.13/1.0.1/pekko-http_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor_3/1.0.1/pekko-actor_3-1.0.1.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-http_2.13/1.0.1/pekko-http_2.13-1.0.1-sources.jar"
             }
           },
           "com_google_api_client_google_api_client_jar_sources_2_4_0": {
@@ -3367,6 +3400,17 @@
                 "https://repo1.maven.org/maven2/com/google/api/api-common/2.29.1/api-common-2.29.1-sources.jar"
               ],
               "downloaded_file_path": "v1/com/google/api/api-common/2.29.1/api-common-2.29.1-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_stream_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "54748c5f3d152c47b23ca756b24180d2401d95edf277325b57e4ed0c639c794c",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1.jar"
             }
           },
           "org_seleniumhq_selenium_selenium_devtools_v118_jar_sources_4_16_1": {
@@ -3499,17 +3543,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/s3/2.25.23/s3-2.25.23-sources.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/s3/2.25.23/s3-2.25.23-sources.jar"
-            }
-          },
-          "org_apache_pekko_pekko_actor_typed_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "20127fa875d7fcf7a3806bab4d71a8101070a69d243f966d231a24d894efa13a",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor-typed_3/1.0.1/pekko-actor-typed_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor-typed_3/1.0.1/pekko-actor-typed_3-1.0.1-sources.jar"
             }
           },
           "javax_annotation_javax_annotation_api_jar_sources_1_3_2": {
@@ -3743,28 +3776,6 @@
               "downloaded_file_path": "v1/com/google/protobuf/protobuf-java/3.25.2/protobuf-java-3.25.2.jar"
             }
           },
-          "com_typesafe_ssl_config_core_3_0_6_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "429b65decb3794be9430b3ff5330de61cd0a058b2345521636e698d3fd34e7e5",
-              "urls": [
-                "https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_3/0.6.1/ssl-config-core_3-0.6.1.jar"
-              ],
-              "downloaded_file_path": "v1/com/typesafe/ssl-config-core_3/0.6.1/ssl-config-core_3-0.6.1.jar"
-            }
-          },
-          "org_apache_pekko_pekko_http_core_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "e37c8f839bfb51d6afe7de6109a0eacb4c12261fc77f2279b0c4a3d5aaaa5e81",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http-core_3/1.0.1/pekko-http-core_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-http-core_3/1.0.1/pekko-http-core_3-1.0.1-sources.jar"
-            }
-          },
           "io_netty_netty_codec_4_1_108_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3820,6 +3831,17 @@
               "downloaded_file_path": "v1/com/google/api/grpc/grpc-google-cloud-storage-v2/2.36.1-alpha/grpc-google-cloud-storage-v2-2.36.1-alpha-sources.jar"
             }
           },
+          "org_apache_pekko_pekko_stream_2_13_jar_sources_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "0a016474134a456c175ac03ee4d81967436f4437f7cb723ed9b35ddef4a9aef5",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1-sources.jar"
+            }
+          },
           "ch_qos_logback_logback_core_1_3_6": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3842,17 +3864,6 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar"
             }
           },
-          "org_apache_pekko_pekko_actor_typed_3_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "915f6092c45fbbd4a48658ba5ccc602cbab58a23715ffac0a14b76bd7fede570",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor-typed_3/1.0.1/pekko-actor-typed_3-1.0.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor-typed_3/1.0.1/pekko-actor-typed_3-1.0.1.jar"
-            }
-          },
           "org_apache_httpcomponents_httpclient_jar_sources_4_5_14": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3862,17 +3873,6 @@
                 "https://repo1.maven.org/maven2/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14-sources.jar"
               ],
               "downloaded_file_path": "v1/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14-sources.jar"
-            }
-          },
-          "org_apache_pekko_pekko_protobuf_v3_3_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "b70072e224752b65cca4a8138ebcdbc473408653059bd718d1b5e7d3518e3292",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-protobuf-v3_3/1.0.1/pekko-protobuf-v3_3-1.0.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-protobuf-v3_3/1.0.1/pekko-protobuf-v3_3-1.0.1.jar"
             }
           },
           "com_google_j2objc_j2objc_annotations_jar_sources_3_0_0": {
@@ -3906,6 +3906,17 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/protocol-core/2.25.23/protocol-core-2.25.23-sources.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/protocol-core/2.25.23/protocol-core-2.25.23-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_protobuf_v3_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "b70072e224752b65cca4a8138ebcdbc473408653059bd718d1b5e7d3518e3292",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-protobuf-v3_2.13/1.0.1/pekko-protobuf-v3_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-protobuf-v3_2.13/1.0.1/pekko-protobuf-v3_2.13-1.0.1.jar"
             }
           },
           "com_google_cloud_google_cloud_core_http_jar_sources_2_36_1": {
@@ -3950,17 +3961,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/checksums-spi/2.25.23/checksums-spi-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/checksums-spi/2.25.23/checksums-spi-2.25.23.jar"
-            }
-          },
-          "org_apache_pekko_pekko_parsing_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "72c0b7265a55201c9d820cd60809b7ab503c3c3a65075c705fa722fabc40f629",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-parsing_3/1.0.1/pekko-parsing_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-parsing_3/1.0.1/pekko-parsing_3-1.0.1-sources.jar"
             }
           },
           "org_slf4j_jul_to_slf4j_2_0_12": {
@@ -4040,6 +4040,17 @@
               "downloaded_file_path": "v1/io/opencensus/opencensus-contrib-http-util/0.31.1/opencensus-contrib-http-util-0.31.1-sources.jar"
             }
           },
+          "com_typesafe_ssl_config_core_2_13_jar_sources_0_6_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d0e59959a72fc06a37d9d9fc3698de1ef89de954f52385392021148395fb9f09",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1-sources.jar"
+            }
+          },
           "org_seleniumhq_selenium_selenium_api_4_16_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4073,6 +4084,17 @@
               "downloaded_file_path": "v1/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar"
             }
           },
+          "org_scala_lang_scala_library_2_13_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c6a879e4973a60f6162668542a33eaccc2bb565d1c934fb061c5844259131dd1",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar"
+              ],
+              "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.12/scala-library-2.13.12.jar"
+            }
+          },
           "dev_failsafe_failsafe_3_3_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4082,17 +4104,6 @@
                 "https://repo1.maven.org/maven2/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar"
               ],
               "downloaded_file_path": "v1/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar"
-            }
-          },
-          "org_scala_lang_scala_library_2_13_10": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "e6ca607c3fce03e8fa38af3374ce1f8bb098e316e8bf6f6d27331360feddb1c1",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar"
-              ],
-              "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar"
             }
           },
           "software_amazon_awssdk_arns_2_25_23": {
@@ -4117,6 +4128,17 @@
               "downloaded_file_path": "v1/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar"
             }
           },
+          "org_apache_pekko_pekko_actor_typed_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "88d66138cba91542638a3e4423b14ec946b4f558858cc4d917028ab36279e0c9",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor-typed_2.13/1.0.1/pekko-actor-typed_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor-typed_2.13/1.0.1/pekko-actor-typed_2.13-1.0.1.jar"
+            }
+          },
           "io_netty_netty_codec_http2_4_1_108_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4126,17 +4148,6 @@
                 "https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.108.Final/netty-codec-http2-4.1.108.Final.jar"
               ],
               "downloaded_file_path": "v1/io/netty/netty-codec-http2/4.1.108.Final/netty-codec-http2-4.1.108.Final.jar"
-            }
-          },
-          "org_apache_pekko_pekko_stream_3_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "a902329fae153ff1e56be54b63d810628c9c7e7bfd93d560682e80c506434b5e",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-stream_3/1.0.1/pekko-stream_3-1.0.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-stream_3/1.0.1/pekko-stream_3-1.0.1.jar"
             }
           },
           "org_apache_maven_maven_model_builder_jar_sources_3_9_6": {
@@ -4397,6 +4408,17 @@
               "downloaded_file_path": "v1/io/grpc/grpc-grpclb/1.62.2/grpc-grpclb-1.62.2-sources.jar"
             }
           },
+          "org_apache_pekko_pekko_parsing_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "0decd109b36cad88905be36d4e6fbf209010116ed8b3322f4a1612e6ee45b220",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-parsing_2.13/1.0.1/pekko-parsing_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-parsing_2.13/1.0.1/pekko-parsing_2.13-1.0.1.jar"
+            }
+          },
           "com_fasterxml_jackson_core_jackson_core_2_17_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4428,6 +4450,17 @@
                 "https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12-sources.jar"
               ],
               "downloaded_file_path": "v1/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_slf4j_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "62cd9c9a7c9a8dc094bb3e15637d5909bc8028d511672552db2d2e16cebf135a",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-slf4j_2.13/1.0.1/pekko-slf4j_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-slf4j_2.13/1.0.1/pekko-slf4j_2.13-1.0.1.jar"
             }
           },
           "software_amazon_awssdk_aws_xml_protocol_jar_sources_2_25_23": {
@@ -4463,17 +4496,6 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0-sources.jar"
             }
           },
-          "org_parboiled_parboiled_3_2_5_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "f1e5fa8f92d579e23a50722c937e6c2de93d60b1074c5feae713701f1db3fbfd",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/parboiled/parboiled_3/2.5.0/parboiled_3-2.5.0.jar"
-              ],
-              "downloaded_file_path": "v1/org/parboiled/parboiled_3/2.5.0/parboiled_3-2.5.0.jar"
-            }
-          },
           "software_amazon_awssdk_crt_core_jar_sources_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4505,17 +4527,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/http-client-spi/2.25.23/http-client-spi-2.25.23-sources.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/http-client-spi/2.25.23/http-client-spi-2.25.23-sources.jar"
-            }
-          },
-          "org_apache_pekko_pekko_protobuf_v3_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "55c103e0ec1378adb127c8928e599cca0760a2228abe93d924b2637263fd8f21",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-protobuf-v3_3/1.0.1/pekko-protobuf-v3_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-protobuf-v3_3/1.0.1/pekko-protobuf-v3_3-1.0.1-sources.jar"
             }
           },
           "io_netty_netty_transport_4_1_108_Final": {
@@ -4639,10 +4650,10 @@
               "boms": [],
               "artifacts": [
                 "{ \"group\": \"org.seleniumhq.selenium\", \"artifact\": \"selenium-java\", \"version\": \"4.16.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-stream_3\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-stream_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.slf4j\", \"artifact\": \"slf4j-api\", \"version\": \"2.0.13\" }",
                 "{ \"group\": \"ch.qos.logback\", \"artifact\": \"logback-classic\", \"version\": \"1.3.6\" }"
               ],
@@ -4710,26 +4721,15 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/netty-nio-client/2.25.23/netty-nio-client-2.25.23-sources.jar"
             }
           },
-          "org_apache_pekko_pekko_parsing_3_1_0_1": {
+          "org_apache_pekko_pekko_http_core_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "2071a1fc1a578bf91294d094b85d96bbc981dd4fb195ff290b5bfade50bc8de9",
+              "sha256": "e37c8f839bfb51d6afe7de6109a0eacb4c12261fc77f2279b0c4a3d5aaaa5e81",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-parsing_3/1.0.1/pekko-parsing_3-1.0.1.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http-core_2.13/1.0.1/pekko-http-core_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-parsing_3/1.0.1/pekko-parsing_3-1.0.1.jar"
-            }
-          },
-          "org_apache_pekko_pekko_http_core_3_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "a68aa5710fe2bab68a08a6b8269a781aef0ad0053795c5f2ba6f0409ef1d2a40",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http-core_3/1.0.1/pekko-http-core_3-1.0.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-http-core_3/1.0.1/pekko-http-core_3-1.0.1.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-http-core_2.13/1.0.1/pekko-http-core_2.13-1.0.1-sources.jar"
             }
           },
           "com_google_protobuf_protobuf_java_util_jar_sources_3_25_2": {

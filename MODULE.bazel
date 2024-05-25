@@ -3,6 +3,11 @@ bazel_dep(name = "rules_java", version = "7.6.1")
 bazel_dep(name = "rules_jvm_external", version = "6.1")
 bazel_dep(name = "toolchains_llvm", version = "1.0.0")
 
+# Internal Extension Section
+
+constants = use_extension("//bazel:extensions.bzl", "constants")
+use_repo(constants, "constants")
+
 # C/C++ Section
 
 llvm = use_extension("@toolchains_llvm//toolchain/extensions:llvm.bzl", "llvm")
@@ -16,16 +21,28 @@ register_toolchains("@llvm_toolchain//:all")
 
 # JVM Section
 
+SCALA_VERSION = "2.13"
+SCALA_BUGFIX_VERSION = "12"
+
+# SCALA_VERSION = "3"
+# SCALA_BUGFIX_VERSION = "3.1"
+
+SCALA_FULL_VERSION = "{}.{}".format(SCALA_VERSION, SCALA_BUGFIX_VERSION)
+PEKKO_VERSION = "1.0.1"
+
+constants.export(name = "constants", key = "SCALA_VERSION", value = SCALA_VERSION)
+constants.export(name = "constants", key = "SCALA_FULL_VERSION", value = SCALA_FULL_VERSION)
+
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 
 maven.install(
     name = "mvn",
     artifacts = [
         "org.seleniumhq.selenium:selenium-java:4.16.1",
-        "org.apache.pekko:pekko-http_3:1.0.1",
-        "org.apache.pekko:pekko-actor_3:1.0.1",
-        "org.apache.pekko:pekko-actor-typed_3:1.0.1",
-        "org.apache.pekko:pekko-stream_3:1.0.1",
+        "org.apache.pekko:pekko-http_{}:{}".format(SCALA_VERSION, PEKKO_VERSION),
+        "org.apache.pekko:pekko-actor_{}:{}".format(SCALA_VERSION, PEKKO_VERSION),
+        "org.apache.pekko:pekko-actor-typed_{}:{}".format(SCALA_VERSION, PEKKO_VERSION),
+        "org.apache.pekko:pekko-stream_{}:{}".format(SCALA_VERSION, PEKKO_VERSION),
         "org.slf4j:slf4j-api:2.0.13",
         "ch.qos.logback:logback-classic:1.3.6",
     ],
