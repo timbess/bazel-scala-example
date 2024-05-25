@@ -52,9 +52,10 @@ class Main(context: ActorContext[String])
 
 object ActorHierarchyExperiments extends App {
   // given system: ActorSystem[_] =
-  //   ActorSystem(Behaviors.empty, "testSystem")
+  //   ActorSystem(Behaviors.empty, "main")
   // given executionContext: ExecutionContext = system.executionContext
-  implicit val system: ActorSystem[String] = ActorSystem(Main(), "main")
+  implicit val system: ActorSystem[String] =
+    ActorSystem(Behaviors.empty, "main")
   implicit val executionContext: ExecutionContext = system.executionContext
 
   val route: Route =
@@ -69,12 +70,16 @@ object ActorHierarchyExperiments extends App {
       }
     }
 
-  val bindingFuture = Http().newServerAt("localhost", 8080).bind(route)
+  val host = "localhost"
+  val port = 8080
+  val url = s"http://$host:$port/hello"
 
+  val bindingFuture = Http().newServerAt(host, port).bind(route)
+  
   // import org.slf4j.LoggerFactory
   // val foo = LoggerFactory.getLogger("com.github.timbess")
   println(
-    s"Server now online. Please navigate to http://localhost:8084/hello\nPress RETURN to stop..."
+    s"Server now online. Please navigate to ${url}\nPress RETURN to stop..."
   )
   StdIn.readLine() // let it run until user presses return
   bindingFuture
