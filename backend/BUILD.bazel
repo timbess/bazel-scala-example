@@ -15,12 +15,12 @@ scala_binary(
     ],
     deps = [
         ":lib",
-        "@mvn//:org_slf4j_slf4j_api",
         "@mvn//:com_typesafe_config",
         "@mvn//:org_apache_pekko_pekko_actor_3",
         "@mvn//:org_apache_pekko_pekko_actor_typed_3",
         "@mvn//:org_apache_pekko_pekko_http_3",
         "@mvn//:org_apache_pekko_pekko_http_core_3",
         "@mvn//:org_apache_pekko_pekko_stream_3",
+        "@mvn//:org_slf4j_slf4j_api",
     ],
 )

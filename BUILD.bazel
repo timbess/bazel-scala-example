@@ -1,7 +1,5 @@
 load("@io_bazel_rules_scala//scala:scala_toolchain.bzl", "scala_toolchain")
 
-# exports_files(["*"])
-
 scala_toolchain(
     name = "semanticdb_toolchain_impl",
     enable_semanticdb = True,
