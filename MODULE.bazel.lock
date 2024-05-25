@@ -84,7 +84,7 @@
     "//bazel:extensions.bzl%constants": {
       "general": {
         "bzlTransitiveDigest": "50rhJ+who0tK6CubIxQy2xsKiwoZLIOfL9v6HeZu1kA=",
-        "usagesDigest": "EPGmJWZLuCLfszx/s6cjl4XM/zs79lJRyF26iAGN09Y=",
+        "usagesDigest": "bDDBqcn3aViEqliD75xbiVHnVmUZK1F2FBB7c4zbzls=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -95,6 +95,7 @@
             "attributes": {
               "vars": {
                 "SCALA_VERSION": "2.13",
+                "SCALA_VERSION_SUFFIX": "2_13",
                 "SCALA_FULL_VERSION": "2.13.12"
               }
             }

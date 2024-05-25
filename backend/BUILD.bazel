@@ -1,7 +1,5 @@
-load("@constants//:vars.bzl", _SCALA_VERSION = "SCALA_VERSION")
+load("@constants//:vars.bzl", "SCALA_VERSION_SUFFIX")
 load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary", "scala_library")
-
-SCALA_VERSION = _SCALA_VERSION.replace(".", "_")
 
 scala_library(
     name = "lib",
@@ -19,11 +17,16 @@ scala_binary(
     deps = [
         ":lib",
         "@mvn//:com_typesafe_config",
-        "@mvn//:org_apache_pekko_pekko_actor_{}".format(SCALA_VERSION),
-        "@mvn//:org_apache_pekko_pekko_actor_typed_{}".format(SCALA_VERSION),
-        "@mvn//:org_apache_pekko_pekko_http_{}".format(SCALA_VERSION),
-        "@mvn//:org_apache_pekko_pekko_http_core_{}".format(SCALA_VERSION),
-        "@mvn//:org_apache_pekko_pekko_stream_{}".format(SCALA_VERSION),
+        "@mvn//:org_apache_pekko_pekko_actor_{}".format(SCALA_VERSION_SUFFIX),
+        "@mvn//:org_apache_pekko_pekko_actor_typed_{}".format(SCALA_VERSION_SUFFIX),
+        "@mvn//:org_apache_pekko_pekko_http_{}".format(SCALA_VERSION_SUFFIX),
+        "@mvn//:org_apache_pekko_pekko_http_core_{}".format(SCALA_VERSION_SUFFIX),
+        "@mvn//:org_apache_pekko_pekko_stream_{}".format(SCALA_VERSION_SUFFIX),
         "@mvn//:org_slf4j_slf4j_api",
     ],
+)
+
+alias(
+    name = "backend",
+    actual = ":main",
 )

@@ -31,6 +31,7 @@ SCALA_FULL_VERSION = "{}.{}".format(SCALA_VERSION, SCALA_BUGFIX_VERSION)
 PEKKO_VERSION = "1.0.1"
 
 constants.export(name = "constants", key = "SCALA_VERSION", value = SCALA_VERSION)
+constants.export(name = "constants", key = "SCALA_VERSION_SUFFIX", value = SCALA_VERSION.replace(".", "_"))
 constants.export(name = "constants", key = "SCALA_FULL_VERSION", value = SCALA_FULL_VERSION)
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
