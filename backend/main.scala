@@ -51,12 +51,11 @@ class Main(context: ActorContext[String])
 }
 
 object ActorHierarchyExperiments extends App {
-  // given system: ActorSystem[_] =
+  given system: ActorSystem[_] = ActorSystem(Behaviors.empty, "main")
+  given executionContext: ExecutionContext = system.executionContext
+  // implicit val system: ActorSystem[String] =
   //   ActorSystem(Behaviors.empty, "main")
-  // given executionContext: ExecutionContext = system.executionContext
-  implicit val system: ActorSystem[String] =
-    ActorSystem(Behaviors.empty, "main")
-  implicit val executionContext: ExecutionContext = system.executionContext
+  // implicit val executionContext: ExecutionContext = system.executionContext
 
   val route: Route =
     path("hello") {
@@ -75,7 +74,7 @@ object ActorHierarchyExperiments extends App {
   val url = s"http://$host:$port/hello"
 
   val bindingFuture = Http().newServerAt(host, port).bind(route)
-  
+
   // import org.slf4j.LoggerFactory
   // val foo = LoggerFactory.getLogger("com.github.timbess")
   println(
