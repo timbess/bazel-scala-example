@@ -1,12 +1,12 @@
 load("@io_bazel_rules_scala//scala:scala_toolchain.bzl", "scala_toolchain")
 
+# Need to run this target because metals seems to default to using a version that
+# breaks auto fix context actions (at least in Metals 1.3.1)
 java_binary(
     name = "bazel_bsp",
     main_class = "org.jetbrains.bsp.bazel.install.Install",
     runtime_deps = ["@mvn//:org_jetbrains_bsp_bazel_bsp"],
 )
-
-exports_files(glob(["*"]))
 
 scala_toolchain(
     name = "semanticdb_toolchain_impl",
