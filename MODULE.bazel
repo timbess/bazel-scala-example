@@ -2,6 +2,7 @@ bazel_dep(name = "bazel_skylib", version = "1.6.1")
 bazel_dep(name = "rules_java", version = "7.6.1")
 bazel_dep(name = "rules_jvm_external", version = "6.1")
 bazel_dep(name = "toolchains_llvm", version = "1.0.0")
+bazel_dep(name = "rules_graalvm", version = "0.11.1")
 
 # Internal Extension Section
 
@@ -21,13 +22,14 @@ register_toolchains("@llvm_toolchain//:all")
 
 # JVM Section
 
-SCALA_VERSION = "3"
-SCALA_BUGFIX_VERSION = "3.1"
+# SCALA_VERSION = "3"
+# SCALA_BUGFIX_VERSION = "3.1"
 
-# SCALA_VERSION = "2.13"
-# SCALA_BUGFIX_VERSION = "12"
+SCALA_VERSION = "2.13"
+SCALA_BUGFIX_VERSION = "12"
 SCALA_FULL_VERSION = "{}.{}".format(SCALA_VERSION, SCALA_BUGFIX_VERSION)
 PEKKO_VERSION = "1.0.1"
+HTTP4S_VERSION = "1.0.0-M41"
 
 constants.export(name = "constants", key = "SCALA_VERSION", value = SCALA_VERSION)
 constants.export(name = "constants", key = "SCALA_VERSION_SUFFIX", value = SCALA_VERSION.replace(".", "_"))
@@ -46,6 +48,18 @@ maven.install(
         "org.slf4j:slf4j-api:2.0.13",
         "ch.qos.logback:logback-classic:1.3.6",
         "org.jetbrains.bsp:bazel-bsp:3.2.0",
+        "org.typelevel:cats-effect_{}:3.5.4".format(SCALA_VERSION),
+        "org.typelevel:cats-effect-kernel_{}:3.5.4".format(SCALA_VERSION),
+        "org.typelevel:cats-core_{}:2.12.0".format(SCALA_VERSION),
+        "org.http4s:http4s-ember-client_{}:{}".format(SCALA_VERSION, HTTP4S_VERSION),
+        "org.http4s:http4s-ember-server_{}:{}".format(SCALA_VERSION, HTTP4S_VERSION),
+        "org.http4s:http4s-dsl_{}:{}".format(SCALA_VERSION, HTTP4S_VERSION),
+        "org.http4s:http4s-circe_{}:{}".format(SCALA_VERSION, HTTP4S_VERSION),
+        "io.circe:circe-core_{}:0.14.7".format(SCALA_VERSION),
+        "io.circe:circe-generic_{}:0.14.7".format(SCALA_VERSION),
+        "io.circe:circe-literal_{}:0.14.7".format(SCALA_VERSION),
+        "org.typelevel:log4cats-slf4j_{}:2.7.0".format(SCALA_VERSION),
+        "com.comcast:ip4s-core_{}:3.5.0".format(SCALA_VERSION),
     ],
     repositories = [
         "https://repo1.maven.org/maven2",
@@ -59,3 +73,18 @@ use_repo(
     maven,
     "mvn",
 )
+
+gvm = use_extension("@rules_graalvm//:extensions.bzl", "graalvm")
+
+gvm.graalvm(
+    name = "graalvm",
+    version = "21.0.2",  # gvm sdk version format like `24.x.x` also supported
+    distribution = "ce",  # `oracle`, `ce`, or `community`
+    java_version = "21",  # `17`, `20`, `21`, or `22` as supported by the version provided
+)
+
+use_repo(gvm, "graalvm")
+
+register_toolchains("@graalvm//:jvm")
+register_toolchains("@graalvm//:sdk")
+register_toolchains("@graalvm//:bootstrap_runtime_toolchain")

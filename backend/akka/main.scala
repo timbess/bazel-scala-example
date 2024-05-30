@@ -1,4 +1,4 @@
-package com.github.timbess
+package com.github.timbess.akka
 
 import scala.concurrent.ExecutionContext
 import scala.concurrent.Future
@@ -16,11 +16,18 @@ import pekko.http.scaladsl.server.Directives._
 import scala.io.StdIn
 
 object ActorHierarchyExperiments extends App {
-  given system: ActorSystem[_] = ActorSystem(Behaviors.empty, "main")
-  given executionContext: ExecutionContext = system.executionContext
-  // implicit val system: ActorSystem[String] =
-  //   ActorSystem(Behaviors.empty, "main")
-  // implicit val executionContext: ExecutionContext = system.executionContext
+  // given system: ActorSystem[_] = ActorSystem(Behaviors.empty, "main")
+  // given executionContext: ExecutionContext = system.executionContext
+  implicit val system: ActorSystem[String] =
+    ActorSystem(Behaviors.empty, "main")
+  implicit val executionContext: ExecutionContext = system.executionContext
+
+  println(
+    s"Process ID: ${java.lang.management.ManagementFactory.getRuntimeMXBean.getName}"
+  )
+  println(s"JVM name: ${System.getProperty("java.vm.name")}")
+  println(s"JVM vendor: ${System.getProperty("java.vendor")}")
+  println(s"JVM version: ${System.getProperty("java.version")}")
 
   val route: Route =
     path("hello") {

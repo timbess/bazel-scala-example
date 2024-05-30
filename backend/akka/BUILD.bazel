@@ -1,5 +1,6 @@
 load("@constants//:vars.bzl", "SCALA_VERSION_SUFFIX")
 load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary", "scala_library")
+load("@rules_graalvm//graalvm:defs.bzl", "native_image")
 
 scala_library(
     name = "lib",
@@ -10,7 +11,7 @@ scala_library(
 scala_binary(
     name = "main",
     srcs = ["main.scala"],
-    main_class = "com.github.timbess.ActorHierarchyExperiments",
+    main_class = "com.github.timbess.akka.ActorHierarchyExperiments",
     runtime_deps = [
         "@mvn//:ch_qos_logback_logback_classic",
     ],
@@ -26,7 +27,25 @@ scala_binary(
     ],
 )
 
+# Couldn't get this working unfortunately
+native_image(
+    name = "main_native",
+    include_resources = ".*\\.(properties|conf)",
+    initialize_at_run_time = [
+        "org.apache.pekko.actor.Props",
+        "pekko.protobuf.DescriptorProtos",
+        "com.typesafe.config.impl.ConfigImpl$EnvVariablesHolder",
+        "com.typesafe.config.impl.ConfigImpl$SystemPropertiesHolder",
+        "org.apache.pekko.event.DefaultLoggingFilter",
+    ],
+    main_class = "com.github.timbess.akka.ActorHierarchyExperiments",
+    native_image_tool = "@graalvm//:native-image",
+    reflection_configuration = ":reflection-config.json",
+    tags = ["manual"],
+    deps = [":main"],
+)
+
 alias(
-    name = "backend",
+    name = "akka",
     actual = ":main",
 )

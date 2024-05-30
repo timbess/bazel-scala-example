@@ -6,7 +6,9 @@
     "https://bcr.bazel.build/modules/abseil-cpp/20211102.0/MODULE.bazel": "70390338f7a5106231d20620712f7cccb659cd0e9d073d1991c038eb9fc57589",
     "https://bcr.bazel.build/modules/abseil-cpp/20211102.0/source.json": "7e3a9adf473e9af076ae485ed649d5641ad50ec5c11718103f34de03170d94ad",
     "https://bcr.bazel.build/modules/apple_support/1.5.0/MODULE.bazel": "50341a62efbc483e8a2a6aec30994a58749bd7b885e18dd96aa8c33031e558ef",
-    "https://bcr.bazel.build/modules/apple_support/1.5.0/source.json": "eb98a7627c0bc486b57f598ad8da50f6625d974c8f723e9ea71bd39f709c9862",
+    "https://bcr.bazel.build/modules/apple_support/1.8.1/MODULE.bazel": "500f7aa32c008222e360dc9a158c248c2dbaeb3b6246c19e7269981dbd61e29b",
+    "https://bcr.bazel.build/modules/apple_support/1.8.1/source.json": "6362ffe3728c63ab28daf35c5804931419e076ab0e60c7e0043484016e5a9800",
+    "https://bcr.bazel.build/modules/bazel_features/1.0.0/MODULE.bazel": "d7f022dc887efb96e1ee51cec7b2e48d41e36ff59a6e4f216c40e4029e1585bf",
     "https://bcr.bazel.build/modules/bazel_features/1.11.0/MODULE.bazel": "f9382337dd5a474c3b7d334c2f83e50b6eaedc284253334cf823044a26de03e8",
     "https://bcr.bazel.build/modules/bazel_features/1.11.0/source.json": "c9320aa53cd1c441d24bd6b716da087ad7e4ff0d9742a9884587596edfe53015",
     "https://bcr.bazel.build/modules/bazel_skylib/1.0.3/MODULE.bazel": "bcb0fd896384802d1ad283b4e4eb4d718eebd8cb820b0a2c3a347fb971afd9d8",
@@ -40,6 +42,8 @@
     "https://bcr.bazel.build/modules/rules_cc/0.0.8/MODULE.bazel": "964c85c82cfeb6f3855e6a07054fdb159aced38e99a5eecf7bce9d53990afa3e",
     "https://bcr.bazel.build/modules/rules_cc/0.0.9/MODULE.bazel": "836e76439f354b89afe6a911a7adf59a6b2518fafb174483ad78a2a2fde7b1c5",
     "https://bcr.bazel.build/modules/rules_cc/0.0.9/source.json": "1f1ba6fea244b616de4a554a0f4983c91a9301640c8fe0dd1d410254115c8430",
+    "https://bcr.bazel.build/modules/rules_graalvm/0.11.1/MODULE.bazel": "0caaea2dff60b70b8f9b9ceb6e5ae815b85ae610a0392433a22c755b2f2c2456",
+    "https://bcr.bazel.build/modules/rules_graalvm/0.11.1/source.json": "23d59a63e1dce95df987d19284bad81a4bf7e4df788d47b0ad99c217447bceca",
     "https://bcr.bazel.build/modules/rules_java/4.0.0/MODULE.bazel": "5a78a7ae82cd1a33cef56dc578c7d2a46ed0dca12643ee45edbb8417899e6f74",
     "https://bcr.bazel.build/modules/rules_java/6.0.0/MODULE.bazel": "8a43b7df601a7ec1af61d79345c17b31ea1fedc6711fd4abfd013ea612978e39",
     "https://bcr.bazel.build/modules/rules_java/6.4.0/MODULE.bazel": "e986a9fe25aeaa84ac17ca093ef13a4637f6107375f64667a15999f77db6c8f6",
@@ -84,7 +88,7 @@
     "//bazel:extensions.bzl%constants": {
       "general": {
         "bzlTransitiveDigest": "50rhJ+who0tK6CubIxQy2xsKiwoZLIOfL9v6HeZu1kA=",
-        "usagesDigest": "kJwUeoi5UoNuxNG9GpRw2OZwphmMv7t6M6aIwoK1OXY=",
+        "usagesDigest": "bDDBqcn3aViEqliD75xbiVHnVmUZK1F2FBB7c4zbzls=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -94,9 +98,9 @@
             "ruleClassName": "create_vars",
             "attributes": {
               "vars": {
-                "SCALA_VERSION": "3",
-                "SCALA_VERSION_SUFFIX": "3",
-                "SCALA_FULL_VERSION": "3.3.1"
+                "SCALA_VERSION": "2.13",
+                "SCALA_VERSION_SUFFIX": "2_13",
+                "SCALA_FULL_VERSION": "2.13.12"
               }
             }
           }
@@ -106,8 +110,8 @@
     },
     "@@apple_support~//crosstool:setup.bzl%apple_cc_configure_extension": {
       "general": {
-        "bzlTransitiveDigest": "PjIds3feoYE8SGbbIq2SFTZy3zmxeO2tQevJZNDo7iY=",
-        "usagesDigest": "aLmqbvowmHkkBPve05yyDNGN7oh7QE9kBADr3QIZTZs=",
+        "bzlTransitiveDigest": "UxZFvCeNtqOfABEQ0g7SXWSfNlKhn2Bmq3DHR47loSA=",
+        "usagesDigest": "n0/QKoqccR9AmakcnGD8sxU+UmSR5WN38s4qRDfVTXQ=",
         "recordedFileInputs": {},
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -175,13 +179,51 @@
         "recordedRepoMappingEntries": []
       }
     },
+    "@@rules_graalvm~//:extensions.bzl%graalvm": {
+      "general": {
+        "bzlTransitiveDigest": "oqP4PNJw7nLci1kFecLZ7XDtOCZSmOWo0xtfJSKAU04=",
+        "usagesDigest": "MMVMK0LU5yKjZ4ERL9OPO2espm/UqQuSCX7FeGuDQnc=",
+        "recordedFileInputs": {},
+        "recordedDirentsInputs": {},
+        "envVariables": {},
+        "generatedRepoSpecs": {
+          "graalvm_toolchains": {
+            "bzlFile": "@@rules_graalvm~//internal:graalvm_bindist.bzl",
+            "ruleClassName": "_toolchain_config",
+            "attributes": {
+              "build_file": "\nalias(\n    name = \"toolchain_gvm\",\n    actual = \"gvm\",\n    visibility = [\"//visibility:public\"],\n)\ntoolchain(\n    name = \"gvm\",\n    exec_compatible_with = [\n        \n    ],\n    target_compatible_with = [\n        \n    ],\n    toolchain = \"@graalvm//:gvm\",\n    toolchain_type = \"@rules_graalvm//graalvm/toolchain\",\n    visibility = [\"//visibility:public\"],\n)\n\nconfig_setting(\n    name = \"prefix_version_setting\",\n    values = {\"java_runtime_version\": \"graalvm_21\"},\n    visibility = [\"//visibility:private\"],\n)\ntoolchain(\n    name = \"toolchain\",\n    target_compatible_with = [],\n    target_settings = [\":prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:runtime_toolchain_type\",\n    toolchain = \"@graalvm//:jdk\",\n    visibility = [\"//visibility:public\"],\n)\n\ntoolchain(\n    name = \"bootstrap_runtime_toolchain\",\n    # These constraints are not required for correctness, but prevent fetches of remote JDK for\n    # different architectures. As every Java compilation toolchain depends on a bootstrap runtime in\n    # the same configuration, this constraint will not result in toolchain resolution failures.\n    exec_compatible_with = [],\n    target_settings = [\":prefix_version_setting\"],\n    toolchain_type = \"@bazel_tools//tools/jdk:bootstrap_runtime_toolchain_type\",\n    toolchain = \"@graalvm//:jdk\",\n    visibility = [\"//visibility:public\"],\n)\n\n"
+            }
+          },
+          "graalvm": {
+            "bzlFile": "@@rules_graalvm~//internal:graalvm_bindist.bzl",
+            "ruleClassName": "_graalvm_bindist_repository",
+            "attributes": {
+              "version": "21.0.2",
+              "java_version": "21",
+              "distribution": "ce",
+              "components": [],
+              "setup_actions": [],
+              "enable_toolchain": true,
+              "toolchain_config": "graalvm_toolchains"
+            }
+          }
+        },
+        "recordedRepoMappingEntries": [
+          [
+            "rules_graalvm~",
+            "bazel_skylib",
+            "bazel_skylib~"
+          ]
+        ]
+      }
+    },
     "@@rules_jvm_external~//:extensions.bzl%maven": {
       "general": {
         "bzlTransitiveDigest": "wGT7rRufBRVoXr38hFv79t0cgbRCCarWhdOZRsZfqvQ=",
-        "usagesDigest": "66UV96SlLk10tEJ+ttTzUiE4VeJGYgRgBJSHBf7nyQc=",
+        "usagesDigest": "DgQULhi59ZLauL70yoN2JHOTrXEiVL8QQc4G1m9Zk2E=",
         "recordedFileInputs": {
           "@@rules_jvm_external~//rules_jvm_external_deps_install.json": "0bfbc915d9155df44d7a3b216e8f3c1fbcd110e358dd07637dc393583a5227e8",
-          "@@//maven_install.json": "f2dd40dba09ff56f48918dbbc7bad5aa027642d4e8d9395b1d16e0c1ab90b877"
+          "@@//maven_install.json": "3c79b32c75512551f1e1031392a94c91ef888de1741f3ea562e837afdc8dfe6d"
         },
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -251,13 +293,25 @@
               ],
               "artifacts": [
                 "{ \"group\": \"org.seleniumhq.selenium\", \"artifact\": \"selenium-java\", \"version\": \"4.16.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-stream_3\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-stream_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.slf4j\", \"artifact\": \"slf4j-api\", \"version\": \"2.0.13\" }",
                 "{ \"group\": \"ch.qos.logback\", \"artifact\": \"logback-classic\", \"version\": \"1.3.6\" }",
-                "{ \"group\": \"org.jetbrains.bsp\", \"artifact\": \"bazel-bsp\", \"version\": \"3.2.0\" }"
+                "{ \"group\": \"org.jetbrains.bsp\", \"artifact\": \"bazel-bsp\", \"version\": \"3.2.0\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-effect_2.13\", \"version\": \"3.5.4\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-effect-kernel_2.13\", \"version\": \"3.5.4\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-core_2.13\", \"version\": \"2.12.0\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-ember-client_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-ember-server_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-dsl_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-circe_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"io.circe\", \"artifact\": \"circe-core_2.13\", \"version\": \"0.14.7\" }",
+                "{ \"group\": \"io.circe\", \"artifact\": \"circe-generic_2.13\", \"version\": \"0.14.7\" }",
+                "{ \"group\": \"io.circe\", \"artifact\": \"circe-literal_2.13\", \"version\": \"0.14.7\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"log4cats-slf4j_2.13\", \"version\": \"2.7.0\" }",
+                "{ \"group\": \"com.comcast\", \"artifact\": \"ip4s-core_2.13\", \"version\": \"3.5.0\" }"
               ],
               "fail_on_missing_checksum": true,
               "fetch_sources": true,
@@ -277,6 +331,17 @@
               "aar_import_bzl_label": "@build_bazel_rules_android//android:rules.bzl",
               "duplicate_version_warning": "warn",
               "ignore_empty_files": false
+            }
+          },
+          "org_http4s_http4s_ember_core_2_13_jar_sources_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "8a048e44e10ac3b96a5658b06a5f42374c31ad8e138bf265d9ea428bf697a481",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-ember-core_2.13/1.0.0-M41/http4s-ember-core_2.13-1.0.0-M41-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-ember-core_2.13/1.0.0-M41/http4s-ember-core_2.13-1.0.0-M41-sources.jar"
             }
           },
           "org_eclipse_xtend_org_eclipse_xtend_lib_jar_sources_2_28_0": {
@@ -411,6 +476,17 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0-sources.jar"
             }
           },
+          "io_circe_circe_jawn_2_13_0_14_6": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "195876a433cc6be76546fd8aa35a7fe75c76969d2e6deacc9be0490d273f498e",
+              "urls": [
+                "https://repo1.maven.org/maven2/io/circe/circe-jawn_2.13/0.14.6/circe-jawn_2.13-0.14.6.jar"
+              ],
+              "downloaded_file_path": "v1/io/circe/circe-jawn_2.13/0.14.6/circe-jawn_2.13-0.14.6.jar"
+            }
+          },
           "org_reactivestreams_reactive_streams_1_0_4": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -444,6 +520,28 @@
               "downloaded_file_path": "v1/io/grpc/grpc-protobuf/1.63.0/grpc-protobuf-1.63.0.jar"
             }
           },
+          "org_apache_pekko_pekko_protobuf_v3_2_13_jar_sources_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "55c103e0ec1378adb127c8928e599cca0760a2228abe93d924b2637263fd8f21",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-protobuf-v3_2.13/1.0.1/pekko-protobuf-v3_2.13-1.0.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-protobuf-v3_2.13/1.0.1/pekko-protobuf-v3_2.13-1.0.1-sources.jar"
+            }
+          },
+          "org_typelevel_log4cats_core_2_13_jar_sources_2_7_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "e906d1cadb6555d9d86860e32607e7f1839ee7ba3d75c8eff08fb6a064e2dc6d",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/log4cats-core_2.13/2.7.0/log4cats-core_2.13-2.7.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/log4cats-core_2.13/2.7.0/log4cats-core_2.13-2.7.0-sources.jar"
+            }
+          },
           "org_apache_maven_resolver_maven_resolver_transport_file_1_9_18": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -464,6 +562,17 @@
                 "https://repo1.maven.org/maven2/org/apache/maven/maven-settings-builder/3.9.6/maven-settings-builder-3.9.6.jar"
               ],
               "downloaded_file_path": "v1/org/apache/maven/maven-settings-builder/3.9.6/maven-settings-builder-3.9.6.jar"
+            }
+          },
+          "org_typelevel_cats_effect_std_2_13_jar_sources_3_5_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "af0657bda1366afac9129ef462389ddf201c21a331aa560db93bc615d0b3c254",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-effect-std_2.13/3.5.4/cats-effect-std_2.13-3.5.4-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-effect-std_2.13/3.5.4/cats-effect-std_2.13-3.5.4-sources.jar"
             }
           },
           "org_jetbrains_kotlinx_kotlinx_coroutines_core_jvm_jar_sources_1_8_0": {
@@ -642,6 +751,17 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0-sources.jar"
             }
           },
+          "org_http4s_http4s_circe_2_13_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "6e47d7dc890b19ff372e08e132a315b815fb6727328da86ff9ff28e5e6aec163",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-circe_2.13/1.0.0-M41/http4s-circe_2.13-1.0.0-M41.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-circe_2.13/1.0.0-M41/http4s-circe_2.13-1.0.0-M41.jar"
+            }
+          },
           "org_eclipse_xtext_org_eclipse_xtext_xbase_lib_jar_sources_2_28_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -684,6 +804,17 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/s3/2.25.23/s3-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/s3/2.25.23/s3-2.25.23.jar"
+            }
+          },
+          "io_circe_circe_numbers_2_13_0_14_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d220ca7e59ac5af074cb34528eb139fde73b893fb7ecfb0c4f09dbb6c1c52bba",
+              "urls": [
+                "https://repo1.maven.org/maven2/io/circe/circe-numbers_2.13/0.14.7/circe-numbers_2.13-0.14.7.jar"
+              ],
+              "downloaded_file_path": "v1/io/circe/circe-numbers_2.13/0.14.7/circe-numbers_2.13-0.14.7.jar"
             }
           },
           "software_amazon_awssdk_profiles_jar_sources_2_25_23": {
@@ -730,6 +861,17 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/apache-client/2.25.23/apache-client-2.25.23.jar"
             }
           },
+          "org_typelevel_log4cats_slf4j_2_13_jar_sources_2_7_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "bd5ff42d5e15aef09309e278c2298a34c9e31aa949f7da812bb7f60f31d5977d",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/log4cats-slf4j_2.13/2.7.0/log4cats-slf4j_2.13-2.7.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/log4cats-slf4j_2.13/2.7.0/log4cats-slf4j_2.13-2.7.0-sources.jar"
+            }
+          },
           "org_apache_maven_resolver_maven_resolver_impl_1_9_18": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -739,6 +881,17 @@
                 "https://repo1.maven.org/maven2/org/apache/maven/resolver/maven-resolver-impl/1.9.18/maven-resolver-impl-1.9.18.jar"
               ],
               "downloaded_file_path": "v1/org/apache/maven/resolver/maven-resolver-impl/1.9.18/maven-resolver-impl-1.9.18.jar"
+            }
+          },
+          "com_chuusai_shapeless_2_13_jar_sources_2_3_10": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "3be559ad262d6f79d5b8ba5ad78873faaf0956764afa3a1bbf8801b9927b8cfc",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/chuusai/shapeless_2.13/2.3.10/shapeless_2.13-2.3.10-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/chuusai/shapeless_2.13/2.3.10/shapeless_2.13-2.3.10-sources.jar"
             }
           },
           "io_netty_netty_handler_jar_sources_4_1_108_Final": {
@@ -796,6 +949,17 @@
               "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-databind/2.17.0/jackson-databind-2.17.0-sources.jar"
             }
           },
+          "org_http4s_http4s_circe_2_13_jar_sources_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "ecd9f79207e3d658472c3384fdcd3c954391255577fad9fee5f8b5026b031c04",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-circe_2.13/1.0.0-M41/http4s-circe_2.13-1.0.0-M41-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-circe_2.13/1.0.0-M41/http4s-circe_2.13-1.0.0-M41-sources.jar"
+            }
+          },
           "org_apache_commons_commons_exec_jar_sources_1_3": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -805,6 +969,17 @@
                 "https://repo1.maven.org/maven2/org/apache/commons/commons-exec/1.3/commons-exec-1.3-sources.jar"
               ],
               "downloaded_file_path": "v1/org/apache/commons/commons-exec/1.3/commons-exec-1.3-sources.jar"
+            }
+          },
+          "org_typelevel_cats_parse_2_13_1_0_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "f5d6c9049662c36a7e1aa5218dfbbe08e9ec652c0d1a493c57ea1dd248bf602d",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-parse_2.13/1.0.0/cats-parse_2.13-1.0.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-parse_2.13/1.0.0/cats-parse_2.13-1.0.0.jar"
             }
           },
           "software_amazon_awssdk_json_utils_jar_sources_2_25_23": {
@@ -851,6 +1026,17 @@
               "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-devtools-v85/4.16.1/selenium-devtools-v85-4.16.1-sources.jar"
             }
           },
+          "com_comcast_ip4s_core_2_13_3_5_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "100033896abefaf1908541289eb2b384685d8a4ab136a551508dade982542599",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/comcast/ip4s-core_2.13/3.5.0/ip4s-core_2.13-3.5.0.jar"
+              ],
+              "downloaded_file_path": "v1/com/comcast/ip4s-core_2.13/3.5.0/ip4s-core_2.13-3.5.0.jar"
+            }
+          },
           "commons_io_commons_io_jar_sources_2_16_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -860,6 +1046,17 @@
                 "https://repo1.maven.org/maven2/commons-io/commons-io/2.16.0/commons-io-2.16.0-sources.jar"
               ],
               "downloaded_file_path": "v1/commons-io/commons-io/2.16.0/commons-io-2.16.0-sources.jar"
+            }
+          },
+          "org_scodec_scodec_bits_2_13_jar_sources_1_1_38": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "aae43473df2350e53840de6358718a834fbfc7ff1e42a9087a0cf8b1c3321181",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/scodec/scodec-bits_2.13/1.1.38/scodec-bits_2.13-1.1.38-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/scodec/scodec-bits_2.13/1.1.38/scodec-bits_2.13-1.1.38-sources.jar"
             }
           },
           "com_google_googlejavaformat_google_java_format_1_22_0": {
@@ -917,6 +1114,28 @@
               "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1-sources.jar"
             }
           },
+          "com_comcast_ip4s_core_2_13_jar_sources_3_5_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "66375581f15971be0b02551201fbc60a8837b2ffbd738cccfb79d59fae1fb4d3",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/comcast/ip4s-core_2.13/3.5.0/ip4s-core_2.13-3.5.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/comcast/ip4s-core_2.13/3.5.0/ip4s-core_2.13-3.5.0-sources.jar"
+            }
+          },
+          "org_http4s_http4s_ember_core_2_13_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c7663ad6d34f82fd07c535f40ebf52706badf6674e550d3f333ac1a96dc4de2d",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-ember-core_2.13/1.0.0-M41/http4s-ember-core_2.13-1.0.0-M41.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-ember-core_2.13/1.0.0-M41/http4s-ember-core_2.13-1.0.0-M41.jar"
+            }
+          },
           "com_google_code_gson_gson_jar_sources_2_10_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -939,6 +1158,17 @@
               "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-chrome-driver/4.16.1/selenium-chrome-driver-4.16.1-sources.jar"
             }
           },
+          "io_circe_circe_generic_2_13_0_14_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "5174660e32418e57f32757d14a241d1aeaaf14c4f60443677271fd9244c0b8a0",
+              "urls": [
+                "https://repo1.maven.org/maven2/io/circe/circe-generic_2.13/0.14.7/circe-generic_2.13-0.14.7.jar"
+              ],
+              "downloaded_file_path": "v1/io/circe/circe-generic_2.13/0.14.7/circe-generic_2.13-0.14.7.jar"
+            }
+          },
           "io_opentelemetry_opentelemetry_sdk_logs_1_28_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -959,6 +1189,17 @@
                 "https://repo1.maven.org/maven2/com/google/auto/value/auto-value-annotations/1.10.4/auto-value-annotations-1.10.4.jar"
               ],
               "downloaded_file_path": "v1/com/google/auto/value/auto-value-annotations/1.10.4/auto-value-annotations-1.10.4.jar"
+            }
+          },
+          "com_typesafe_ssl_config_core_2_13_0_6_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "478d7a888fddc5a3f714e5ff1b665090ed9bb45cca6278c7cc94e4514a12067b",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1.jar"
+              ],
+              "downloaded_file_path": "v1/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1.jar"
             }
           },
           "org_seleniumhq_selenium_selenium_devtools_v119_jar_sources_4_16_1": {
@@ -1086,6 +1327,17 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/endpoints-spi/2.25.23/endpoints-spi-2.25.23-sources.jar"
             }
           },
+          "org_typelevel_literally_2_13_jar_sources_1_1_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "e197bcc357dd09eef51c6b135a4a77a3f36d24cc637e3f9280ca27e23bb73f3e",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/literally_2.13/1.1.0/literally_2.13-1.1.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/literally_2.13/1.1.0/literally_2.13-1.1.0-sources.jar"
+            }
+          },
           "io_netty_netty_transport_native_unix_common_jar_sources_4_1_108_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1095,6 +1347,17 @@
                 "https://repo1.maven.org/maven2/io/netty/netty-transport-native-unix-common/4.1.108.Final/netty-transport-native-unix-common-4.1.108.Final-sources.jar"
               ],
               "downloaded_file_path": "v1/io/netty/netty-transport-native-unix-common/4.1.108.Final/netty-transport-native-unix-common-4.1.108.Final-sources.jar"
+            }
+          },
+          "org_typelevel_cats_effect_kernel_2_13_3_5_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "422d0e64db394dbd6157b7fd37f71caad4c385958b54b0941572f0e934eb0a8f",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-effect-kernel_2.13/3.5.4/cats-effect-kernel_2.13-3.5.4.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-effect-kernel_2.13/3.5.4/cats-effect-kernel_2.13-3.5.4.jar"
             }
           },
           "io_netty_netty_common_jar_sources_4_1_108_Final": {
@@ -1119,6 +1382,17 @@
               "downloaded_file_path": "v1/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0.jar"
             }
           },
+          "io_circe_circe_core_2_13_0_14_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "bd8ea8070678efff5ad626ee4e85379ed2ee54b53ba1375fd7b8c96114528b30",
+              "urls": [
+                "https://repo1.maven.org/maven2/io/circe/circe-core_2.13/0.14.7/circe-core_2.13-0.14.7.jar"
+              ],
+              "downloaded_file_path": "v1/io/circe/circe-core_2.13/0.14.7/circe-core_2.13-0.14.7.jar"
+            }
+          },
           "software_amazon_awssdk_regions_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1141,15 +1415,15 @@
               "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1.jar"
             }
           },
-          "org_apache_pekko_pekko_slf4j_3_1_0_1": {
+          "io_circe_circe_generic_2_13_jar_sources_0_14_7": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "905d8d766d2b677db8c9f5506dd6293b3fb393e8b736f76c9b1b2815bd49e4b4",
+              "sha256": "ad08275c85d0c34be30ff30cd21dcfc91911d09bcabb481d5071407d9f2566ce",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-slf4j_3/1.0.1/pekko-slf4j_3-1.0.1.jar"
+                "https://repo1.maven.org/maven2/io/circe/circe-generic_2.13/0.14.7/circe-generic_2.13-0.14.7-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-slf4j_3/1.0.1/pekko-slf4j_3-1.0.1.jar"
+              "downloaded_file_path": "v1/io/circe/circe-generic_2.13/0.14.7/circe-generic_2.13-0.14.7-sources.jar"
             }
           },
           "com_google_auth_google_auth_library_oauth2_http_1_23_0": {
@@ -1238,6 +1512,17 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/http-auth-aws/2.25.23/http-auth-aws-2.25.23-sources.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/http-auth-aws/2.25.23/http-auth-aws-2.25.23-sources.jar"
+            }
+          },
+          "io_circe_circe_core_2_13_jar_sources_0_14_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "50843dad470445f829a62e98002a6b9c6ce88bf6db9f6a7ce33d82ac61579278",
+              "urls": [
+                "https://repo1.maven.org/maven2/io/circe/circe-core_2.13/0.14.7/circe-core_2.13-0.14.7-sources.jar"
+              ],
+              "downloaded_file_path": "v1/io/circe/circe-core_2.13/0.14.7/circe-core_2.13-0.14.7-sources.jar"
             }
           },
           "io_grpc_grpc_auth_jar_sources_1_62_2": {
@@ -1361,17 +1646,6 @@
               "downloaded_file_path": "v1/org/apache/maven/maven-settings/3.9.6/maven-settings-3.9.6.jar"
             }
           },
-          "org_apache_pekko_pekko_actor_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "468be288e45a8cd4e2f785fb64ba8ccf23d4f7881b3c21de515f4867ceb79dd9",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor_3/1.0.1/pekko-actor_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor_3/1.0.1/pekko-actor_3-1.0.1-sources.jar"
-            }
-          },
           "org_eclipse_xtext_org_eclipse_xtext_xbase_lib_2_28_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1394,17 +1668,6 @@
               "downloaded_file_path": "v1/com/google/errorprone/error_prone_annotations/2.23.0/error_prone_annotations-2.23.0-sources.jar"
             }
           },
-          "org_apache_pekko_pekko_http_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "c5350697809b24662b04204b8c9d9569bc670a626023b98b7d20025111797e4f",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http_3/1.0.1/pekko-http_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-http_3/1.0.1/pekko-http_3-1.0.1-sources.jar"
-            }
-          },
           "org_checkerframework_checker_qual_jar_sources_3_37_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1414,6 +1677,17 @@
                 "https://repo1.maven.org/maven2/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0-sources.jar"
               ],
               "downloaded_file_path": "v1/org/checkerframework/checker-qual/3.37.0/checker-qual-3.37.0-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_parsing_2_13_jar_sources_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "93f6d444cc512292c1de39ad032c27a18e498e2b6cf54c6e93e598790b6cc771",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-parsing_2.13/1.0.1/pekko-parsing_2.13-1.0.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-parsing_2.13/1.0.1/pekko-parsing_2.13-1.0.1-sources.jar"
             }
           },
           "org_apache_velocity_velocity_engine_core_jar_sources_2_3": {
@@ -1471,6 +1745,17 @@
               "downloaded_file_path": "v1/com/google/http-client/google-http-client-jackson2/1.44.1/google-http-client-jackson2-1.44.1-sources.jar"
             }
           },
+          "org_typelevel_cats_core_2_13_2_12_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "0d57ee8ad9d969245ece5a0030f46066bd48898107edfba4b0295123daeff65d",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-core_2.13/2.12.0/cats-core_2.13-2.12.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-core_2.13/2.12.0/cats-core_2.13-2.12.0.jar"
+            }
+          },
           "io_netty_netty_codec_jar_sources_4_1_108_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1515,6 +1800,17 @@
               "downloaded_file_path": "v1/com/google/guava/guava/33.1.0-jre/guava-33.1.0-jre.jar"
             }
           },
+          "org_typelevel_case_insensitive_2_13_jar_sources_1_4_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "15f680daeaa86a91427d14bbcf5d34dd980d4d576da0e20dad4995fd935ccc37",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/case-insensitive_2.13/1.4.0/case-insensitive_2.13-1.4.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/case-insensitive_2.13/1.4.0/case-insensitive_2.13-1.4.0-sources.jar"
+            }
+          },
           "com_fasterxml_jackson_core_jackson_databind_2_17_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1546,6 +1842,17 @@
                 "https://repo1.maven.org/maven2/org/apache/maven/resolver/maven-resolver-named-locks/1.9.18/maven-resolver-named-locks-1.9.18-sources.jar"
               ],
               "downloaded_file_path": "v1/org/apache/maven/resolver/maven-resolver-named-locks/1.9.18/maven-resolver-named-locks-1.9.18-sources.jar"
+            }
+          },
+          "org_scodec_scodec_bits_2_13_1_1_38": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c711e4a08b56f1269253f26a416863e986fcfee6953e461c8e99e5586322f70a",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/scodec/scodec-bits_2.13/1.1.38/scodec-bits_2.13-1.1.38.jar"
+              ],
+              "downloaded_file_path": "v1/org/scodec/scodec-bits_2.13/1.1.38/scodec-bits_2.13-1.1.38.jar"
             }
           },
           "io_grpc_grpc_protobuf_jar_sources_1_62_2": {
@@ -1768,6 +2075,17 @@
               "downloaded_file_path": "v1/org/eclipse/lsp4j/org.eclipse.lsp4j.generator/0.20.1/org.eclipse.lsp4j.generator-0.20.1.jar"
             }
           },
+          "org_http4s_http4s_ember_client_2_13_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "a7ab6e23f87c87615c2c035a7f17e8b10808928e2b7e967690cb188d43550c16",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-ember-client_2.13/1.0.0-M41/http4s-ember-client_2.13-1.0.0-M41.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-ember-client_2.13/1.0.0-M41/http4s-ember-client_2.13-1.0.0-M41.jar"
+            }
+          },
           "io_grpc_grpc_stub_1_62_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1779,15 +2097,15 @@
               "downloaded_file_path": "v1/io/grpc/grpc-stub/1.62.2/grpc-stub-1.62.2.jar"
             }
           },
-          "org_scala_lang_scala3_library_3_3_3_1": {
+          "io_circe_circe_literal_2_13_0_14_7": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "b64c13c1f3d1ac2323457ec6cc09e9b38d7a9ef6889a1a0063601bf25d545508",
+              "sha256": "fdee78ab511b323becce0c6c2118cd6eeab894c8b4151fc4d6445dad7dc67ba7",
               "urls": [
-                "https://repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar"
+                "https://repo1.maven.org/maven2/io/circe/circe-literal_2.13/0.14.7/circe-literal_2.13-0.14.7.jar"
               ],
-              "downloaded_file_path": "v1/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1.jar"
+              "downloaded_file_path": "v1/io/circe/circe-literal_2.13/0.14.7/circe-literal_2.13-0.14.7.jar"
             }
           },
           "com_google_cloud_google_cloud_core_http_2_36_1": {
@@ -1810,17 +2128,6 @@
                 "https://repo1.maven.org/maven2/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.jar"
               ],
               "downloaded_file_path": "v1/org/codehaus/plexus/plexus-sec-dispatcher/2.0/plexus-sec-dispatcher-2.0.jar"
-            }
-          },
-          "org_parboiled_parboiled_3_jar_sources_2_5_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "6e3826fca0af052c7373e24b209111cdb0277cb5816769ba34ba44840d451536",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/parboiled/parboiled_3/2.5.0/parboiled_3-2.5.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/parboiled/parboiled_3/2.5.0/parboiled_3-2.5.0-sources.jar"
             }
           },
           "software_amazon_awssdk_utils_jar_sources_2_25_23": {
@@ -1867,6 +2174,50 @@
               "downloaded_file_path": "v1/commons-io/commons-io/2.16.0/commons-io-2.16.0.jar"
             }
           },
+          "org_http4s_http4s_core_2_13_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "381827f9436fbea3a5e978f503301a8931ddaa88bdbb02d3f4267df2edc3b043",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-core_2.13/1.0.0-M41/http4s-core_2.13-1.0.0-M41.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-core_2.13/1.0.0-M41/http4s-core_2.13-1.0.0-M41.jar"
+            }
+          },
+          "org_http4s_http4s_client_2_13_jar_sources_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "02c673caa0bd44fe3e67e0d616a9ee8cf6a4900b8f8534c0006ec09caf344201",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-client_2.13/1.0.0-M41/http4s-client_2.13-1.0.0-M41-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-client_2.13/1.0.0-M41/http4s-client_2.13-1.0.0-M41-sources.jar"
+            }
+          },
+          "org_typelevel_jawn_fs2_2_13_jar_sources_2_4_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "2bbe8c53c9c78cfa1249017447a4dab4c14af073ac33f6d7c40d680a2ea3a481",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/jawn-fs2_2.13/2.4.0/jawn-fs2_2.13-2.4.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/jawn-fs2_2.13/2.4.0/jawn-fs2_2.13-2.4.0-sources.jar"
+            }
+          },
+          "org_typelevel_keypool_2_13_jar_sources_0_4_9": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "21edc7507ccc540958096e11111b65504dae81c6dfb1af8d3a8d97d4dfbe2993",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/keypool_2.13/0.4.9/keypool_2.13-0.4.9-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/keypool_2.13/0.4.9/keypool_2.13-0.4.9-sources.jar"
+            }
+          },
           "org_apache_maven_shared_maven_shared_utils_jar_sources_3_3_4": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1887,6 +2238,17 @@
                 "https://repo1.maven.org/maven2/org/slf4j/slf4j-simple/2.0.12/slf4j-simple-2.0.12-sources.jar"
               ],
               "downloaded_file_path": "v1/org/slf4j/slf4j-simple/2.0.12/slf4j-simple-2.0.12-sources.jar"
+            }
+          },
+          "org_typelevel_log4cats_slf4j_2_13_2_7_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "42e24934648b4522d08526c661e585c15c12134b0b2aa4a01a2ea7a451286dba",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/log4cats-slf4j_2.13/2.7.0/log4cats-slf4j_2.13-2.7.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/log4cats-slf4j_2.13/2.7.0/log4cats-slf4j_2.13-2.7.0.jar"
             }
           },
           "org_apache_httpcomponents_httpcore_jar_sources_4_4_16": {
@@ -2010,6 +2372,17 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/annotations/2.25.23/annotations-2.25.23-sources.jar"
             }
           },
+          "org_http4s_http4s_ember_server_2_13_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "15bf5ccbe5da145ca595591a39238936adb544ea9d7e91d176fa2346c8b36175",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-ember-server_2.13/1.0.0-M41/http4s-ember-server_2.13-1.0.0-M41.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-ember-server_2.13/1.0.0-M41/http4s-ember-server_2.13-1.0.0-M41.jar"
+            }
+          },
           "org_eclipse_sisu_org_eclipse_sisu_plexus_jar_sources_0_9_0_M2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2021,15 +2394,15 @@
               "downloaded_file_path": "v1/org/eclipse/sisu/org.eclipse.sisu.plexus/0.9.0.M2/org.eclipse.sisu.plexus-0.9.0.M2-sources.jar"
             }
           },
-          "com_typesafe_ssl_config_core_3_jar_sources_0_6_1": {
+          "org_apache_pekko_pekko_http_2_13_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "d0e59959a72fc06a37d9d9fc3698de1ef89de954f52385392021148395fb9f09",
+              "sha256": "08dcc9cbd396e64052d9e61a60dbda6faa04a54d80fc79e1632bc441c7d4f4ac",
               "urls": [
-                "https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_3/0.6.1/ssl-config-core_3-0.6.1-sources.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http_2.13/1.0.1/pekko-http_2.13-1.0.1.jar"
               ],
-              "downloaded_file_path": "v1/com/typesafe/ssl-config-core_3/0.6.1/ssl-config-core_3-0.6.1-sources.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-http_2.13/1.0.1/pekko-http_2.13-1.0.1.jar"
             }
           },
           "io_grpc_grpc_stub_1_63_0": {
@@ -2041,6 +2414,17 @@
                 "https://repo1.maven.org/maven2/io/grpc/grpc-stub/1.63.0/grpc-stub-1.63.0.jar"
               ],
               "downloaded_file_path": "v1/io/grpc/grpc-stub/1.63.0/grpc-stub-1.63.0.jar"
+            }
+          },
+          "org_typelevel_keypool_2_13_0_4_9": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "6cd3d9bf5e6ab8e72cf1e603fa6dfb54e063a0eb363b07a257e6f357108e7c71",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/keypool_2.13/0.4.9/keypool_2.13-0.4.9.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/keypool_2.13/0.4.9/keypool_2.13-0.4.9.jar"
             }
           },
           "org_codehaus_plexus_plexus_utils_3_5_1": {
@@ -2109,6 +2493,17 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar"
             }
           },
+          "com_twitter_hpack_jar_sources_1_0_2": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "0e2a9941063e25d52542e39022e7a1859ee36d2f0dfaf3438508a4c16efa99dc",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/twitter/hpack/1.0.2/hpack-1.0.2-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/twitter/hpack/1.0.2/hpack-1.0.2-sources.jar"
+            }
+          },
           "software_amazon_awssdk_sdk_core_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2153,6 +2548,17 @@
               "downloaded_file_path": "v1/org/apache/maven/maven-core/3.9.6/maven-core-3.9.6.jar"
             }
           },
+          "org_typelevel_cats_kernel_2_13_2_12_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "e28ed4437745b514617b2cae111eff7b5ea66489c600ac7605dd51aa14551d6f",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.13/2.12.0/cats-kernel_2.13-2.12.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-kernel_2.13/2.12.0/cats-kernel_2.13-2.12.0.jar"
+            }
+          },
           "commons_codec_commons_codec_1_16_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2175,15 +2581,59 @@
               "downloaded_file_path": "v1/io/grpc/grpc-rls/1.62.2/grpc-rls-1.62.2.jar"
             }
           },
-          "org_apache_pekko_pekko_stream_3_jar_sources_1_0_1": {
+          "com_twitter_hpack_1_0_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "0a016474134a456c175ac03ee4d81967436f4437f7cb723ed9b35ddef4a9aef5",
+              "sha256": "19cd635d439053c9359d4715741a9c11a175ab96581d884f0b1675c841f2003e",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-stream_3/1.0.1/pekko-stream_3-1.0.1-sources.jar"
+                "https://repo1.maven.org/maven2/com/twitter/hpack/1.0.2/hpack-1.0.2.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-stream_3/1.0.1/pekko-stream_3-1.0.1-sources.jar"
+              "downloaded_file_path": "v1/com/twitter/hpack/1.0.2/hpack-1.0.2.jar"
+            }
+          },
+          "org_http4s_http4s_server_2_13_jar_sources_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c1d5b05b209cebd8a67997d14061cadd70bfa526d07862d4ac7dfee6abb3deab",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-server_2.13/1.0.0-M41/http4s-server_2.13-1.0.0-M41-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-server_2.13/1.0.0-M41/http4s-server_2.13-1.0.0-M41-sources.jar"
+            }
+          },
+          "org_http4s_http4s_ember_client_2_13_jar_sources_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "f69b97ec8c5ee813c05cb7b10d34bbb1fcb1a0931d60fc5f3faa6985ba4c5f1a",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-ember-client_2.13/1.0.0-M41/http4s-ember-client_2.13-1.0.0-M41-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-ember-client_2.13/1.0.0-M41/http4s-ember-client_2.13-1.0.0-M41-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_slf4j_2_13_jar_sources_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "6b5ee4c58896d16871c430df5187f96c5ea15e9330876e43af710d3fd23cfb27",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-slf4j_2.13/1.0.1/pekko-slf4j_2.13-1.0.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-slf4j_2.13/1.0.1/pekko-slf4j_2.13-1.0.1-sources.jar"
+            }
+          },
+          "org_http4s_http4s_core_2_13_jar_sources_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "9e11b1702a9af53913ff79451d12a4b6c8c27dc9f06c2fcfa6c70e98e53e3985",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-core_2.13/1.0.0-M41/http4s-core_2.13-1.0.0-M41-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-core_2.13/1.0.0-M41/http4s-core_2.13-1.0.0-M41-sources.jar"
             }
           },
           "io_grpc_grpc_netty_shaded_jar_sources_1_62_2": {
@@ -2252,6 +2702,17 @@
               "downloaded_file_path": "v1/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4-sources.jar"
             }
           },
+          "org_parboiled_parboiled_2_13_2_5_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "a1f35d80018228d77a0a57fafcd968010dc310edbf61801330ff822399218c2c",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/parboiled/parboiled_2.13/2.5.0/parboiled_2.13-2.5.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/parboiled/parboiled_2.13/2.5.0/parboiled_2.13-2.5.0.jar"
+            }
+          },
           "com_fasterxml_jackson_core_jackson_core_jar_sources_2_17_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2318,6 +2779,17 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0-sources.jar"
             }
           },
+          "org_typelevel_jawn_parser_2_13_jar_sources_1_5_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c89b692c2810835a67a7c9a005a878a96089d7564ce07b2ce7e167d49cce2b57",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/jawn-parser_2.13/1.5.1/jawn-parser_2.13-1.5.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/jawn-parser_2.13/1.5.1/jawn-parser_2.13-1.5.1-sources.jar"
+            }
+          },
           "io_netty_netty_buffer_4_1_108_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2338,6 +2810,17 @@
                 "https://repo1.maven.org/maven2/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar"
               ],
               "downloaded_file_path": "v1/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar"
+            }
+          },
+          "org_parboiled_parboiled_2_13_jar_sources_2_5_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "96137f0347cb25ee5f5effe3c96ac14c39d5d31f1febccd322b68751edd4cf3c",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/parboiled/parboiled_2.13/2.5.0/parboiled_2.13-2.5.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/parboiled/parboiled_2.13/2.5.0/parboiled_2.13-2.5.0-sources.jar"
             }
           },
           "software_amazon_awssdk_protocol_core_2_25_23": {
@@ -2483,15 +2966,26 @@
               "downloaded_file_path": "v1/com/google/apis/google-api-services-storage/v1-rev20240311-2.0.0/google-api-services-storage-v1-rev20240311-2.0.0.jar"
             }
           },
-          "org_apache_pekko_pekko_slf4j_3_jar_sources_1_0_1": {
+          "io_circe_circe_literal_2_13_jar_sources_0_14_7": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "6b5ee4c58896d16871c430df5187f96c5ea15e9330876e43af710d3fd23cfb27",
+              "sha256": "ea6c86eb61dea9a72bacd9f9baff001eba011db08fe42f3e08b77caf7260de84",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-slf4j_3/1.0.1/pekko-slf4j_3-1.0.1-sources.jar"
+                "https://repo1.maven.org/maven2/io/circe/circe-literal_2.13/0.14.7/circe-literal_2.13-0.14.7-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-slf4j_3/1.0.1/pekko-slf4j_3-1.0.1-sources.jar"
+              "downloaded_file_path": "v1/io/circe/circe-literal_2.13/0.14.7/circe-literal_2.13-0.14.7-sources.jar"
+            }
+          },
+          "org_http4s_http4s_server_2_13_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "bde5144ca2cbf7d55ed3fb094e7ad45aebcb375481ccd0e5fa2bebee3d2e1b39",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-server_2.13/1.0.0-M41/http4s-server_2.13-1.0.0-M41.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-server_2.13/1.0.0-M41/http4s-server_2.13-1.0.0-M41.jar"
             }
           },
           "org_jetbrains_kotlin_kotlin_stdlib_jar_sources_1_9_21": {
@@ -2516,6 +3010,17 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha-sources.jar"
             }
           },
+          "org_apache_pekko_pekko_http_core_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "af68596999d7b6a8aaa854bc612cc1b8353cd9996c44a253a49b97586363df4a",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http-core_2.13/1.0.1/pekko-http-core_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-http-core_2.13/1.0.1/pekko-http-core_2.13-1.0.1.jar"
+            }
+          },
           "javax_inject_javax_inject_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2525,6 +3030,17 @@
                 "https://repo1.maven.org/maven2/javax/inject/javax.inject/1/javax.inject-1.jar"
               ],
               "downloaded_file_path": "v1/javax/inject/javax.inject/1/javax.inject-1.jar"
+            }
+          },
+          "org_scala_lang_scala_reflect_2_13_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c648ceb93a9fcbd22603e0be3d6a156723ae661f516c772a550a088bb3cbca7a",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar"
+              ],
+              "downloaded_file_path": "v1/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar"
             }
           },
           "org_seleniumhq_selenium_selenium_remote_driver_jar_sources_4_16_1": {
@@ -2571,6 +3087,17 @@
               "downloaded_file_path": "v1/com/google/android/annotations/4.1.1.4/annotations-4.1.1.4-sources.jar"
             }
           },
+          "com_chuusai_shapeless_2_13_2_3_10": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "993c319e7540536ef8cdf13fa904104f3400e64f54abf8585737c48f794732cd",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/chuusai/shapeless_2.13/2.3.10/shapeless_2.13-2.3.10.jar"
+              ],
+              "downloaded_file_path": "v1/com/chuusai/shapeless_2.13/2.3.10/shapeless_2.13-2.3.10.jar"
+            }
+          },
           "com_google_android_annotations_4_1_1_4": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2615,6 +3142,28 @@
               "downloaded_file_path": "v1/com/google/http-client/google-http-client-jackson2/1.44.1/google-http-client-jackson2-1.44.1.jar"
             }
           },
+          "org_http4s_http4s_ember_server_2_13_jar_sources_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "185be8a683bf5d48a3539587b929f35e2f4dcaeb38dd09b94e80dc220a175a60",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-ember-server_2.13/1.0.0-M41/http4s-ember-server_2.13-1.0.0-M41-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-ember-server_2.13/1.0.0-M41/http4s-ember-server_2.13-1.0.0-M41-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_actor_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "89cf0c1f947fa62b7cf177e5aee389ef6c96a2f2070c0454e43310a1b08377da",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor_2.13/1.0.1/pekko-actor_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor_2.13/1.0.1/pekko-actor_2.13-1.0.1.jar"
+            }
+          },
           "io_opentelemetry_opentelemetry_exporter_logging_jar_sources_1_28_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2624,6 +3173,17 @@
                 "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0-sources.jar"
               ],
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0-sources.jar"
+            }
+          },
+          "org_typelevel_log4cats_core_2_13_2_7_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "5c86b106488d321e3caf07a440f6c1e690f1c9254a706a68a3bec57a851a5eed",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/log4cats-core_2.13/2.7.0/log4cats-core_2.13-2.7.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/log4cats-core_2.13/2.7.0/log4cats-core_2.13-2.7.0.jar"
             }
           },
           "commons_logging_commons_logging_jar_sources_1_2": {
@@ -2690,6 +3250,17 @@
                 "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0-sources.jar"
               ],
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0-sources.jar"
+            }
+          },
+          "org_http4s_http4s_crypto_2_13_0_2_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c45868545bde3b3321aa6f3e687480878c7d4bcb4db2e75825b3741ec3740401",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-crypto_2.13/0.2.4/http4s-crypto_2.13-0.2.4.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-crypto_2.13/0.2.4/http4s-crypto_2.13-0.2.4.jar"
             }
           },
           "com_google_api_grpc_proto_google_iam_v1_1_32_1": {
@@ -2769,6 +3340,17 @@
               "downloaded_file_path": "v1/org/apache/maven/resolver/maven-resolver-transport-file/1.9.18/maven-resolver-transport-file-1.9.18-sources.jar"
             }
           },
+          "org_http4s_http4s_client_2_13_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "82c50ca8ec82f5142c08c21c4194011e4a99c26163b108ad0a410b5938592c5b",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-client_2.13/1.0.0-M41/http4s-client_2.13-1.0.0-M41.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-client_2.13/1.0.0-M41/http4s-client_2.13-1.0.0-M41.jar"
+            }
+          },
           "software_amazon_awssdk_http_auth_spi_jar_sources_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2835,6 +3417,17 @@
               "downloaded_file_path": "v1/io/netty/netty-codec-http/4.1.108.Final/netty-codec-http-4.1.108.Final.jar"
             }
           },
+          "org_typelevel_cats_parse_2_13_jar_sources_1_0_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "6c99170ed3e022468ed54a6f87a5e3f822d0e62b1169fac69c55279061217e2a",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-parse_2.13/1.0.0/cats-parse_2.13-1.0.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-parse_2.13/1.0.0/cats-parse_2.13-1.0.0-sources.jar"
+            }
+          },
           "software_amazon_awssdk_http_auth_jar_sources_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2857,6 +3450,17 @@
               "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1.jar"
             }
           },
+          "co_fs2_fs2_core_2_13_3_9_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "5a2cac3de102a566e358c039200fc408c7ca45c49f681450b8ff68f7f765a772",
+              "urls": [
+                "https://repo1.maven.org/maven2/co/fs2/fs2-core_2.13/3.9.4/fs2-core_2.13-3.9.4.jar"
+              ],
+              "downloaded_file_path": "v1/co/fs2/fs2-core_2.13/3.9.4/fs2-core_2.13-3.9.4.jar"
+            }
+          },
           "io_opentelemetry_opentelemetry_exporter_logging_1_28_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2877,6 +3481,28 @@
                 "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1-sources.jar"
               ],
               "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1-sources.jar"
+            }
+          },
+          "org_typelevel_jawn_fs2_2_13_2_4_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "87fe273c00f812208f2e6afecd4b356849b1dff3b99c94ab59dda078db9eb4d5",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/jawn-fs2_2.13/2.4.0/jawn-fs2_2.13-2.4.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/jawn-fs2_2.13/2.4.0/jawn-fs2_2.13-2.4.0.jar"
+            }
+          },
+          "org_typelevel_jawn_parser_2_13_1_5_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "f875e84252f13ceba7589b37f32f6346b04b8c641c04b50c6edb589cfd324539",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/jawn-parser_2.13/1.5.1/jawn-parser_2.13-1.5.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/jawn-parser_2.13/1.5.1/jawn-parser_2.13-1.5.1.jar"
             }
           },
           "org_slf4j_jcl_over_slf4j_jar_sources_1_7_36": {
@@ -3137,6 +3763,17 @@
               "downloaded_file_path": "v1/org/apache/maven/maven-settings-builder/3.9.6/maven-settings-builder-3.9.6-sources.jar"
             }
           },
+          "org_typelevel_cats_effect_kernel_2_13_jar_sources_3_5_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "814df793ff94c7811a642580d3659a0314548a3a01d22a1424a0246e514f58b5",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-effect-kernel_2.13/3.5.4/cats-effect-kernel_2.13-3.5.4-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-effect-kernel_2.13/3.5.4/cats-effect-kernel_2.13-3.5.4-sources.jar"
+            }
+          },
           "io_opentelemetry_opentelemetry_api_events_1_28_0_alpha": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3148,15 +3785,26 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar"
             }
           },
-          "org_apache_pekko_pekko_http_3_1_0_1": {
+          "org_apache_pekko_pekko_actor_typed_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "efaa767f6c4b233fb631d58c8f05634f20577d7372276f7238bd216ef1960f82",
+              "sha256": "5a751d70ec61d426722e009b7c5308d1b83ad223edf5611b91d7ddfedbb6ed65",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http_3/1.0.1/pekko-http_3-1.0.1.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor-typed_2.13/1.0.1/pekko-actor-typed_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-http_3/1.0.1/pekko-http_3-1.0.1.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor-typed_2.13/1.0.1/pekko-actor-typed_2.13-1.0.1-sources.jar"
+            }
+          },
+          "org_scala_lang_scala_reflect_jar_sources_2_13_12": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "9a04bed34e8a706645139bf89f18841773d13405508ff1353d8aef0095d7cebb",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12-sources.jar"
             }
           },
           "com_google_http_client_google_http_client_gson_1_44_1": {
@@ -3379,17 +4027,6 @@
               "downloaded_file_path": "v1/org/threeten/threetenbp/1.6.8/threetenbp-1.6.8-sources.jar"
             }
           },
-          "org_scala_lang_scala3_library_3_jar_sources_3_3_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "83fe3f107e11c2d316c2346504aa8672968e953d2a9f51e3ea2d924b748ce50a",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/scala-lang/scala3-library_3/3.3.1/scala3-library_3-3.3.1-sources.jar"
-            }
-          },
           "javax_annotation_javax_annotation_api_1_3_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3566,6 +4203,17 @@
               "downloaded_file_path": "v1/org/apache/velocity/velocity-engine-core/2.3/velocity-engine-core-2.3.jar"
             }
           },
+          "org_scala_lang_scala_library_jar_sources_2_13_14": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "4be0650f427ebf6ff8a462fe634fdc02665d59ec3962c4d98dbf5ac766f1dd4f",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14-sources.jar"
+            }
+          },
           "org_seleniumhq_selenium_selenium_http_jar_sources_4_16_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3610,15 +4258,15 @@
               "downloaded_file_path": "v1/com/google/guava/guava/33.1.0-jre/guava-33.1.0-jre-sources.jar"
             }
           },
-          "org_scala_lang_scala_library_jar_sources_2_13_10": {
+          "org_apache_pekko_pekko_actor_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "a991527579c81765cc74ecdbf57fe8fda9c1fd88fceebf19266f030e456ee0f0",
+              "sha256": "2f860f5c27ffa777c7dbd2c2c10486cc19c875157a577d56b60a59ceb4d661e7",
               "urls": [
-                "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10-sources.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor_2.13/1.0.1/pekko-actor_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10-sources.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor_2.13/1.0.1/pekko-actor_2.13-1.0.1-sources.jar"
             }
           },
           "unpinned_rules_jvm_external_deps": {
@@ -3679,15 +4327,26 @@
               "ignore_empty_files": false
             }
           },
-          "org_apache_pekko_pekko_actor_3_1_0_1": {
+          "org_apache_pekko_pekko_http_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "49d26b79fe067610817919df53e33211735995b7031f07030fda277013d764a6",
+              "sha256": "c5350697809b24662b04204b8c9d9569bc670a626023b98b7d20025111797e4f",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor_3/1.0.1/pekko-actor_3-1.0.1.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http_2.13/1.0.1/pekko-http_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor_3/1.0.1/pekko-actor_3-1.0.1.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-http_2.13/1.0.1/pekko-http_2.13-1.0.1-sources.jar"
+            }
+          },
+          "org_typelevel_cats_effect_2_13_3_5_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "f303be45905350b6b55e3283349ce10ccca326e191977c089ceb9ab696736ac6",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-effect_2.13/3.5.4/cats-effect_2.13-3.5.4.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-effect_2.13/3.5.4/cats-effect_2.13-3.5.4.jar"
             }
           },
           "com_google_api_client_google_api_client_jar_sources_2_4_0": {
@@ -3712,6 +4371,17 @@
               "downloaded_file_path": "v1/org/codehaus/plexus/plexus-interpolation/1.26/plexus-interpolation-1.26.jar"
             }
           },
+          "org_typelevel_cats_kernel_2_13_jar_sources_2_12_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "28ca5faae964d6ff4834531b0c54b45e4f0955e2dc5b02f08fc8ea772da03e16",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-kernel_2.13/2.12.0/cats-kernel_2.13-2.12.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-kernel_2.13/2.12.0/cats-kernel_2.13-2.12.0-sources.jar"
+            }
+          },
           "org_apache_commons_commons_exec_1_3": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3721,6 +4391,17 @@
                 "https://repo1.maven.org/maven2/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar"
               ],
               "downloaded_file_path": "v1/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar"
+            }
+          },
+          "co_fs2_fs2_core_2_13_jar_sources_3_9_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "8cbf68708b6df5690fc4bc5114791fb5047f706056d0e661e41e4ddedfc3d848",
+              "urls": [
+                "https://repo1.maven.org/maven2/co/fs2/fs2-core_2.13/3.9.4/fs2-core_2.13-3.9.4-sources.jar"
+              ],
+              "downloaded_file_path": "v1/co/fs2/fs2-core_2.13/3.9.4/fs2-core_2.13-3.9.4-sources.jar"
             }
           },
           "io_grpc_grpc_protobuf_jar_sources_1_63_0": {
@@ -3809,6 +4490,17 @@
                 "https://repo1.maven.org/maven2/com/google/api/api-common/2.29.1/api-common-2.29.1-sources.jar"
               ],
               "downloaded_file_path": "v1/com/google/api/api-common/2.29.1/api-common-2.29.1-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_stream_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "54748c5f3d152c47b23ca756b24180d2401d95edf277325b57e4ed0c639c794c",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1.jar"
             }
           },
           "org_seleniumhq_selenium_selenium_devtools_v118_jar_sources_4_16_1": {
@@ -3932,15 +4624,15 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/s3/2.25.23/s3-2.25.23-sources.jar"
             }
           },
-          "org_apache_pekko_pekko_actor_typed_3_jar_sources_1_0_1": {
+          "co_fs2_fs2_io_2_13_3_9_4": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "20127fa875d7fcf7a3806bab4d71a8101070a69d243f966d231a24d894efa13a",
+              "sha256": "b197c27003704b5b19cb9e4430e8946498f743109e03d9d1e72a52357ccf3e1b",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor-typed_3/1.0.1/pekko-actor-typed_3-1.0.1-sources.jar"
+                "https://repo1.maven.org/maven2/co/fs2/fs2-io_2.13/3.9.4/fs2-io_2.13-3.9.4.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor-typed_3/1.0.1/pekko-actor-typed_3-1.0.1-sources.jar"
+              "downloaded_file_path": "v1/co/fs2/fs2-io_2.13/3.9.4/fs2-io_2.13-3.9.4.jar"
             }
           },
           "javax_annotation_javax_annotation_api_jar_sources_1_3_2": {
@@ -3987,6 +4679,17 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/http-auth/2.25.23/http-auth-2.25.23.jar"
             }
           },
+          "org_http4s_http4s_jawn_2_13_jar_sources_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "37619c41790d559e8361d51e989727eacf218c332805e30be8b1131094c24fa8",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-jawn_2.13/1.0.0-M41/http4s-jawn_2.13-1.0.0-M41-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-jawn_2.13/1.0.0-M41/http4s-jawn_2.13-1.0.0-M41-sources.jar"
+            }
+          },
           "org_seleniumhq_selenium_selenium_remote_driver_4_16_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3996,6 +4699,17 @@
                 "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1.jar"
               ],
               "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1.jar"
+            }
+          },
+          "co_fs2_fs2_io_2_13_jar_sources_3_9_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "c6ca82feecc79e7580e7b22ee4e629707189e4e54a8717e199b81f34c6e20146",
+              "urls": [
+                "https://repo1.maven.org/maven2/co/fs2/fs2-io_2.13/3.9.4/fs2-io_2.13-3.9.4-sources.jar"
+              ],
+              "downloaded_file_path": "v1/co/fs2/fs2-io_2.13/3.9.4/fs2-io_2.13-3.9.4-sources.jar"
             }
           },
           "com_google_guava_guava_jar_sources_32_1_3_android": {
@@ -4084,6 +4798,17 @@
                 "https://repo1.maven.org/maven2/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M2/org.eclipse.sisu.inject-0.9.0.M2.jar"
               ],
               "downloaded_file_path": "v1/org/eclipse/sisu/org.eclipse.sisu.inject/0.9.0.M2/org.eclipse.sisu.inject-0.9.0.M2.jar"
+            }
+          },
+          "org_typelevel_cats_effect_2_13_jar_sources_3_5_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "0b848be1b94e7ff5f9c878b5d7d61e432af4f1ae103d67a1fbcf04cd02214232",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-effect_2.13/3.5.4/cats-effect_2.13-3.5.4-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-effect_2.13/3.5.4/cats-effect_2.13-3.5.4-sources.jar"
             }
           },
           "org_apache_maven_maven_artifact_jar_sources_3_9_6": {
@@ -4196,28 +4921,6 @@
               "downloaded_file_path": "v1/com/google/protobuf/protobuf-java/3.25.2/protobuf-java-3.25.2.jar"
             }
           },
-          "com_typesafe_ssl_config_core_3_0_6_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "429b65decb3794be9430b3ff5330de61cd0a058b2345521636e698d3fd34e7e5",
-              "urls": [
-                "https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_3/0.6.1/ssl-config-core_3-0.6.1.jar"
-              ],
-              "downloaded_file_path": "v1/com/typesafe/ssl-config-core_3/0.6.1/ssl-config-core_3-0.6.1.jar"
-            }
-          },
-          "org_apache_pekko_pekko_http_core_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "e37c8f839bfb51d6afe7de6109a0eacb4c12261fc77f2279b0c4a3d5aaaa5e81",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http-core_3/1.0.1/pekko-http-core_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-http-core_3/1.0.1/pekko-http-core_3-1.0.1-sources.jar"
-            }
-          },
           "io_netty_netty_codec_4_1_108_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4227,6 +4930,17 @@
                 "https://repo1.maven.org/maven2/io/netty/netty-codec/4.1.108.Final/netty-codec-4.1.108.Final.jar"
               ],
               "downloaded_file_path": "v1/io/netty/netty-codec/4.1.108.Final/netty-codec-4.1.108.Final.jar"
+            }
+          },
+          "io_circe_circe_numbers_2_13_jar_sources_0_14_7": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "4b2c302f09cfb11d48891a2cc362befd003b00967febbfa82784a20d7d9b7530",
+              "urls": [
+                "https://repo1.maven.org/maven2/io/circe/circe-numbers_2.13/0.14.7/circe-numbers_2.13-0.14.7-sources.jar"
+              ],
+              "downloaded_file_path": "v1/io/circe/circe-numbers_2.13/0.14.7/circe-numbers_2.13-0.14.7-sources.jar"
             }
           },
           "software_amazon_awssdk_checksums_spi_jar_sources_2_25_23": {
@@ -4284,6 +4998,17 @@
               "downloaded_file_path": "v1/com/google/api/grpc/grpc-google-cloud-storage-v2/2.36.1-alpha/grpc-google-cloud-storage-v2-2.36.1-alpha-sources.jar"
             }
           },
+          "org_apache_pekko_pekko_stream_2_13_jar_sources_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "0a016474134a456c175ac03ee4d81967436f4437f7cb723ed9b35ddef4a9aef5",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1-sources.jar"
+            }
+          },
           "ch_qos_logback_logback_core_1_3_6": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4295,6 +5020,17 @@
               "downloaded_file_path": "v1/ch/qos/logback/logback-core/1.3.6/logback-core-1.3.6.jar"
             }
           },
+          "io_circe_circe_jawn_2_13_jar_sources_0_14_6": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "24f103be1a6ef246c4c257eeb94e7862e1158eda550203b31ae63d31e3391cad",
+              "urls": [
+                "https://repo1.maven.org/maven2/io/circe/circe-jawn_2.13/0.14.6/circe-jawn_2.13-0.14.6-sources.jar"
+              ],
+              "downloaded_file_path": "v1/io/circe/circe-jawn_2.13/0.14.6/circe-jawn_2.13-0.14.6-sources.jar"
+            }
+          },
           "io_opentelemetry_opentelemetry_sdk_trace_1_28_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4304,17 +5040,6 @@
                 "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar"
               ],
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar"
-            }
-          },
-          "org_apache_pekko_pekko_actor_typed_3_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "915f6092c45fbbd4a48658ba5ccc602cbab58a23715ffac0a14b76bd7fede570",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor-typed_3/1.0.1/pekko-actor-typed_3-1.0.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor-typed_3/1.0.1/pekko-actor-typed_3-1.0.1.jar"
             }
           },
           "com_fasterxml_jackson_core_jackson_annotations_jar_sources_2_17_0": {
@@ -4350,17 +5075,6 @@
               "downloaded_file_path": "v1/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14-sources.jar"
             }
           },
-          "org_apache_pekko_pekko_protobuf_v3_3_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "b70072e224752b65cca4a8138ebcdbc473408653059bd718d1b5e7d3518e3292",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-protobuf-v3_3/1.0.1/pekko-protobuf-v3_3-1.0.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-protobuf-v3_3/1.0.1/pekko-protobuf-v3_3-1.0.1.jar"
-            }
-          },
           "com_google_j2objc_j2objc_annotations_jar_sources_3_0_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4370,6 +5084,17 @@
                 "https://repo1.maven.org/maven2/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0-sources.jar"
               ],
               "downloaded_file_path": "v1/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0-sources.jar"
+            }
+          },
+          "org_http4s_http4s_jawn_2_13_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d04563d1917400dfc2dfb50fde09436fd8332d361b26fbb4b849fa73470ba8d9",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-jawn_2.13/1.0.0-M41/http4s-jawn_2.13-1.0.0-M41.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-jawn_2.13/1.0.0-M41/http4s-jawn_2.13-1.0.0-M41.jar"
             }
           },
           "io_opentelemetry_opentelemetry_context_jar_sources_1_36_0": {
@@ -4403,6 +5128,17 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/protocol-core/2.25.23/protocol-core-2.25.23-sources.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/protocol-core/2.25.23/protocol-core-2.25.23-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_protobuf_v3_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "b70072e224752b65cca4a8138ebcdbc473408653059bd718d1b5e7d3518e3292",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-protobuf-v3_2.13/1.0.1/pekko-protobuf-v3_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-protobuf-v3_2.13/1.0.1/pekko-protobuf-v3_2.13-1.0.1.jar"
             }
           },
           "io_grpc_grpc_protobuf_lite_jar_sources_1_63_0": {
@@ -4471,17 +5207,6 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/checksums-spi/2.25.23/checksums-spi-2.25.23.jar"
             }
           },
-          "org_apache_pekko_pekko_parsing_3_jar_sources_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "72c0b7265a55201c9d820cd60809b7ab503c3c3a65075c705fa722fabc40f629",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-parsing_3/1.0.1/pekko-parsing_3-1.0.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-parsing_3/1.0.1/pekko-parsing_3-1.0.1-sources.jar"
-            }
-          },
           "org_slf4j_jul_to_slf4j_2_0_12": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4491,6 +5216,17 @@
                 "https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12.jar"
               ],
               "downloaded_file_path": "v1/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12.jar"
+            }
+          },
+          "org_http4s_http4s_dsl_2_13_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "528ea266bad22c57d62d26bd44d406c87ac885546bb70a33275432354e7e1969",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-dsl_2.13/1.0.0-M41/http4s-dsl_2.13-1.0.0-M41.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-dsl_2.13/1.0.0-M41/http4s-dsl_2.13-1.0.0-M41.jar"
             }
           },
           "io_netty_netty_resolver_4_1_108_Final": {
@@ -4559,6 +5295,17 @@
               "downloaded_file_path": "v1/io/opencensus/opencensus-contrib-http-util/0.31.1/opencensus-contrib-http-util-0.31.1-sources.jar"
             }
           },
+          "com_typesafe_ssl_config_core_2_13_jar_sources_0_6_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d0e59959a72fc06a37d9d9fc3698de1ef89de954f52385392021148395fb9f09",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1-sources.jar"
+            }
+          },
           "org_seleniumhq_selenium_selenium_api_4_16_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4614,17 +5361,6 @@
               "downloaded_file_path": "v1/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar"
             }
           },
-          "org_scala_lang_scala_library_2_13_10": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "e6ca607c3fce03e8fa38af3374ce1f8bb098e316e8bf6f6d27331360feddb1c1",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar"
-              ],
-              "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.10/scala-library-2.13.10.jar"
-            }
-          },
           "software_amazon_awssdk_arns_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4634,6 +5370,17 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/arns/2.25.23/arns-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/arns/2.25.23/arns-2.25.23.jar"
+            }
+          },
+          "org_scala_lang_scala_library_2_13_14": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "43e0ca1583df1966eaf02f0fbddcfb3784b995dd06bfc907209347758ce4b7e3",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14.jar"
+              ],
+              "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14.jar"
             }
           },
           "com_google_auto_service_auto_service_annotations_1_1_1": {
@@ -4647,6 +5394,17 @@
               "downloaded_file_path": "v1/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar"
             }
           },
+          "org_apache_pekko_pekko_actor_typed_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "88d66138cba91542638a3e4423b14ec946b4f558858cc4d917028ab36279e0c9",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-actor-typed_2.13/1.0.1/pekko-actor-typed_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-actor-typed_2.13/1.0.1/pekko-actor-typed_2.13-1.0.1.jar"
+            }
+          },
           "io_netty_netty_codec_http2_4_1_108_Final": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4656,17 +5414,6 @@
                 "https://repo1.maven.org/maven2/io/netty/netty-codec-http2/4.1.108.Final/netty-codec-http2-4.1.108.Final.jar"
               ],
               "downloaded_file_path": "v1/io/netty/netty-codec-http2/4.1.108.Final/netty-codec-http2-4.1.108.Final.jar"
-            }
-          },
-          "org_apache_pekko_pekko_stream_3_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "a902329fae153ff1e56be54b63d810628c9c7e7bfd93d560682e80c506434b5e",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-stream_3/1.0.1/pekko-stream_3-1.0.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-stream_3/1.0.1/pekko-stream_3-1.0.1.jar"
             }
           },
           "org_apache_maven_maven_model_builder_jar_sources_3_9_6": {
@@ -4700,6 +5447,17 @@
                 "https://repo1.maven.org/maven2/io/grpc/grpc-api/1.63.0/grpc-api-1.63.0.jar"
               ],
               "downloaded_file_path": "v1/io/grpc/grpc-api/1.63.0/grpc-api-1.63.0.jar"
+            }
+          },
+          "org_typelevel_case_insensitive_2_13_1_4_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "8daf3895f61b1a80e22e8521111056a8346742b77cbba797906af9598f0b76e5",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/case-insensitive_2.13/1.4.0/case-insensitive_2.13-1.4.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/case-insensitive_2.13/1.4.0/case-insensitive_2.13-1.4.0.jar"
             }
           },
           "io_opentelemetry_opentelemetry_semconv_1_28_0_alpha": {
@@ -4801,6 +5559,17 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/http-client-spi/2.25.23/http-client-spi-2.25.23.jar"
             }
           },
+          "org_typelevel_cats_core_2_13_jar_sources_2_12_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "6961cd5f8fdffd127821148c06608f7f9f6e796a50caf0d2bd286dbccc27105a",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-core_2.13/2.12.0/cats-core_2.13-2.12.0-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-core_2.13/2.12.0/cats-core_2.13-2.12.0-sources.jar"
+            }
+          },
           "software_amazon_awssdk_json_utils_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4821,6 +5590,17 @@
                 "https://repo1.maven.org/maven2/org/conscrypt/conscrypt-openjdk-uber/2.5.2/conscrypt-openjdk-uber-2.5.2.jar"
               ],
               "downloaded_file_path": "v1/org/conscrypt/conscrypt-openjdk-uber/2.5.2/conscrypt-openjdk-uber-2.5.2.jar"
+            }
+          },
+          "org_typelevel_literally_2_13_1_1_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "948bc007242d32e7e86c50ecdad68e72ad7fa8efd4a5f0847a080cdafbc43324",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/literally_2.13/1.1.0/literally_2.13-1.1.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/literally_2.13/1.1.0/literally_2.13-1.1.0.jar"
             }
           },
           "io_grpc_grpc_protobuf_lite_1_62_2": {
@@ -4854,6 +5634,17 @@
                 "https://repo1.maven.org/maven2/io/grpc/grpc-context/1.62.2/grpc-context-1.62.2-sources.jar"
               ],
               "downloaded_file_path": "v1/io/grpc/grpc-context/1.62.2/grpc-context-1.62.2-sources.jar"
+            }
+          },
+          "org_typelevel_vault_2_13_3_5_0": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "093b6f393c77815cdc7db780490cbe4d857cdcc281f0eed666732de02942cbea",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/vault_2.13/3.5.0/vault_2.13-3.5.0.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/vault_2.13/3.5.0/vault_2.13-3.5.0.jar"
             }
           },
           "io_netty_netty_codec_http_jar_sources_4_1_108_Final": {
@@ -4971,6 +5762,28 @@
               "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-core/2.17.0/jackson-core-2.17.0.jar"
             }
           },
+          "org_apache_pekko_pekko_parsing_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "0decd109b36cad88905be36d4e6fbf209010116ed8b3322f4a1612e6ee45b220",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-parsing_2.13/1.0.1/pekko-parsing_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-parsing_2.13/1.0.1/pekko-parsing_2.13-1.0.1.jar"
+            }
+          },
+          "org_http4s_http4s_dsl_2_13_jar_sources_1_0_0_M41": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "53eedbd1b371d8052eccfe2a6e058ae9b9633b1b3663f28ecf21fa29e7874ff3",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-dsl_2.13/1.0.0-M41/http4s-dsl_2.13-1.0.0-M41-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-dsl_2.13/1.0.0-M41/http4s-dsl_2.13-1.0.0-M41-sources.jar"
+            }
+          },
           "org_codehaus_plexus_plexus_interpolation_jar_sources_1_26": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4991,6 +5804,17 @@
                 "https://repo1.maven.org/maven2/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12-sources.jar"
               ],
               "downloaded_file_path": "v1/org/slf4j/jul-to-slf4j/2.0.12/jul-to-slf4j-2.0.12-sources.jar"
+            }
+          },
+          "org_apache_pekko_pekko_slf4j_2_13_1_0_1": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "62cd9c9a7c9a8dc094bb3e15637d5909bc8028d511672552db2d2e16cebf135a",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-slf4j_2.13/1.0.1/pekko-slf4j_2.13-1.0.1.jar"
+              ],
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-slf4j_2.13/1.0.1/pekko-slf4j_2.13-1.0.1.jar"
             }
           },
           "software_amazon_awssdk_aws_xml_protocol_jar_sources_2_25_23": {
@@ -5026,17 +5850,6 @@
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0-sources.jar"
             }
           },
-          "org_parboiled_parboiled_3_2_5_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "f1e5fa8f92d579e23a50722c937e6c2de93d60b1074c5feae713701f1db3fbfd",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/parboiled/parboiled_3/2.5.0/parboiled_3-2.5.0.jar"
-              ],
-              "downloaded_file_path": "v1/org/parboiled/parboiled_3/2.5.0/parboiled_3-2.5.0.jar"
-            }
-          },
           "software_amazon_awssdk_crt_core_jar_sources_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -5046,6 +5859,17 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/crt-core/2.25.23/crt-core-2.25.23-sources.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/crt-core/2.25.23/crt-core-2.25.23-sources.jar"
+            }
+          },
+          "org_typelevel_cats_effect_std_2_13_3_5_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "8ffc64bbb230db4dc89a19ebdfb60655ed941451afb131f4fa0e5aba3c6e67e6",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/typelevel/cats-effect-std_2.13/3.5.4/cats-effect-std_2.13-3.5.4.jar"
+              ],
+              "downloaded_file_path": "v1/org/typelevel/cats-effect-std_2.13/3.5.4/cats-effect-std_2.13-3.5.4.jar"
             }
           },
           "org_seleniumhq_selenium_selenium_java_4_16_1": {
@@ -5081,15 +5905,15 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/http-client-spi/2.25.23/http-client-spi-2.25.23-sources.jar"
             }
           },
-          "org_apache_pekko_pekko_protobuf_v3_3_jar_sources_1_0_1": {
+          "org_typelevel_vault_2_13_jar_sources_3_5_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "55c103e0ec1378adb127c8928e599cca0760a2228abe93d924b2637263fd8f21",
+              "sha256": "508b30583f103bad554b066523f2ed2305cc8b18a8746838a7f68acea9817f44",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-protobuf-v3_3/1.0.1/pekko-protobuf-v3_3-1.0.1-sources.jar"
+                "https://repo1.maven.org/maven2/org/typelevel/vault_2.13/3.5.0/vault_2.13-3.5.0-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-protobuf-v3_3/1.0.1/pekko-protobuf-v3_3-1.0.1-sources.jar"
+              "downloaded_file_path": "v1/org/typelevel/vault_2.13/3.5.0/vault_2.13-3.5.0-sources.jar"
             }
           },
           "io_netty_netty_transport_4_1_108_Final": {
@@ -5224,13 +6048,25 @@
               "boms": [],
               "artifacts": [
                 "{ \"group\": \"org.seleniumhq.selenium\", \"artifact\": \"selenium-java\", \"version\": \"4.16.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_3\", \"version\": \"1.0.1\" }",
-                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-stream_3\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_2.13\", \"version\": \"1.0.1\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-stream_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.slf4j\", \"artifact\": \"slf4j-api\", \"version\": \"2.0.13\" }",
                 "{ \"group\": \"ch.qos.logback\", \"artifact\": \"logback-classic\", \"version\": \"1.3.6\" }",
-                "{ \"group\": \"org.jetbrains.bsp\", \"artifact\": \"bazel-bsp\", \"version\": \"3.2.0\" }"
+                "{ \"group\": \"org.jetbrains.bsp\", \"artifact\": \"bazel-bsp\", \"version\": \"3.2.0\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-effect_2.13\", \"version\": \"3.5.4\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-effect-kernel_2.13\", \"version\": \"3.5.4\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-core_2.13\", \"version\": \"2.12.0\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-ember-client_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-ember-server_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-dsl_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-circe_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"io.circe\", \"artifact\": \"circe-core_2.13\", \"version\": \"0.14.7\" }",
+                "{ \"group\": \"io.circe\", \"artifact\": \"circe-generic_2.13\", \"version\": \"0.14.7\" }",
+                "{ \"group\": \"io.circe\", \"artifact\": \"circe-literal_2.13\", \"version\": \"0.14.7\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"log4cats-slf4j_2.13\", \"version\": \"2.7.0\" }",
+                "{ \"group\": \"com.comcast\", \"artifact\": \"ip4s-core_2.13\", \"version\": \"3.5.0\" }"
               ],
               "fetch_sources": true,
               "fetch_javadoc": false,
@@ -5307,26 +6143,15 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/netty-nio-client/2.25.23/netty-nio-client-2.25.23-sources.jar"
             }
           },
-          "org_apache_pekko_pekko_parsing_3_1_0_1": {
+          "org_apache_pekko_pekko_http_core_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "2071a1fc1a578bf91294d094b85d96bbc981dd4fb195ff290b5bfade50bc8de9",
+              "sha256": "e37c8f839bfb51d6afe7de6109a0eacb4c12261fc77f2279b0c4a3d5aaaa5e81",
               "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-parsing_3/1.0.1/pekko-parsing_3-1.0.1.jar"
+                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http-core_2.13/1.0.1/pekko-http-core_2.13-1.0.1-sources.jar"
               ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-parsing_3/1.0.1/pekko-parsing_3-1.0.1.jar"
-            }
-          },
-          "org_apache_pekko_pekko_http_core_3_1_0_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "a68aa5710fe2bab68a08a6b8269a781aef0ad0053795c5f2ba6f0409ef1d2a40",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/pekko/pekko-http-core_3/1.0.1/pekko-http-core_3-1.0.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/pekko/pekko-http-core_3/1.0.1/pekko-http-core_3-1.0.1.jar"
+              "downloaded_file_path": "v1/org/apache/pekko/pekko-http-core_2.13/1.0.1/pekko-http-core_2.13-1.0.1-sources.jar"
             }
           },
           "com_google_protobuf_protobuf_java_util_jar_sources_3_25_2": {
@@ -5360,6 +6185,17 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/endpoints-spi/2.25.23/endpoints-spi-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/endpoints-spi/2.25.23/endpoints-spi-2.25.23.jar"
+            }
+          },
+          "org_http4s_http4s_crypto_2_13_jar_sources_0_2_4": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "b5439b4790cac6df0d89ed6090e7e0480b95af153df6a9966ac3de02e4ad6c87",
+              "urls": [
+                "https://repo1.maven.org/maven2/org/http4s/http4s-crypto_2.13/0.2.4/http4s-crypto_2.13-0.2.4-sources.jar"
+              ],
+              "downloaded_file_path": "v1/org/http4s/http4s-crypto_2.13/0.2.4/http4s-crypto_2.13-0.2.4-sources.jar"
             }
           },
           "com_google_api_grpc_proto_google_cloud_storage_v2_jar_sources_2_36_1_alpha": {
