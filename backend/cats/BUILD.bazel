@@ -1,5 +1,6 @@
 load("@constants//:vars.bzl", "SCALA_VERSION_SUFFIX")
 load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary")
+load("@io_bazel_rules_scala_config//:config.bzl", "SCALA_VERSIONS")
 load("@rules_graalvm//graalvm:defs.bzl", "native_image")
 
 scala_binary(
@@ -11,32 +12,18 @@ scala_binary(
     ],
     deps = [
         "@mvn//:org_typelevel_cats_core_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_typelevel_cats_kernel_" + SCALA_VERSION_SUFFIX,
         "@mvn//:org_typelevel_cats_effect_" + SCALA_VERSION_SUFFIX,
         "@mvn//:org_typelevel_cats_effect_kernel_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_typelevel_cats_effect_std_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_typelevel_literally_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_http4s_http4s_core_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_http4s_http4s_dsl_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_http4s_http4s_server_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_http4s_http4s_client_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_http4s_http4s_ember_server_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_http4s_http4s_ember_client_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_http4s_http4s_ember_core_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_http4s_http4s_circe_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:io_circe_circe_core_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:io_circe_circe_generic_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:io_circe_circe_literal_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:io_circe_circe_jawn_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_typelevel_jawn_parser_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:co_fs2_fs2_core_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:co_fs2_fs2_io_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_typelevel_vault_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_typelevel_case_insensitive_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_typelevel_log4cats_slf4j_" + SCALA_VERSION_SUFFIX,
         "@mvn//:org_typelevel_log4cats_core_" + SCALA_VERSION_SUFFIX,
+        "@mvn//:org_http4s_http4s_dsl_" + SCALA_VERSION_SUFFIX,
+        "@mvn//:org_http4s_http4s_ember_server_" + SCALA_VERSION_SUFFIX,
+        "@mvn//:io_circe_circe_core_" + SCALA_VERSION_SUFFIX,
+        "@mvn//:io_circe_circe_literal_" + SCALA_VERSION_SUFFIX,
+        "@mvn//:org_typelevel_log4cats_slf4j_" + SCALA_VERSION_SUFFIX,
         "@mvn//:com_comcast_ip4s_core_" + SCALA_VERSION_SUFFIX,
-        "@mvn//:org_slf4j_slf4j_api",
+        "@mvn//:co_fs2_fs2_io_" + SCALA_VERSION_SUFFIX,
+        "@mvn//:org_http4s_http4s_core_" + SCALA_VERSION_SUFFIX,
+        "@mvn//:org_scala_lang_scala_library",
     ],
 )
 
