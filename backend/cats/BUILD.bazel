@@ -1,6 +1,5 @@
 load("@constants//:vars.bzl", "SCALA_VERSION_SUFFIX")
 load("@io_bazel_rules_scala//scala:scala.bzl", "scala_binary")
-load("@io_bazel_rules_scala_config//:config.bzl", "SCALA_VERSIONS")
 load("@rules_graalvm//graalvm:defs.bzl", "native_image")
 
 scala_binary(

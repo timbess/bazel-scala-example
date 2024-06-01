@@ -220,10 +220,10 @@
     "@@rules_jvm_external~//:extensions.bzl%maven": {
       "general": {
         "bzlTransitiveDigest": "wGT7rRufBRVoXr38hFv79t0cgbRCCarWhdOZRsZfqvQ=",
-        "usagesDigest": "DgQULhi59ZLauL70yoN2JHOTrXEiVL8QQc4G1m9Zk2E=",
+        "usagesDigest": "qXdPMZrOVwUmkDkE22Tmz2yXLFM8cqbzcZLfX1P2JkI=",
         "recordedFileInputs": {
           "@@rules_jvm_external~//rules_jvm_external_deps_install.json": "0bfbc915d9155df44d7a3b216e8f3c1fbcd110e358dd07637dc393583a5227e8",
-          "@@//maven_install.json": "3c79b32c75512551f1e1031392a94c91ef888de1741f3ea562e837afdc8dfe6d"
+          "@@//maven_install.json": "e3646cd9f2ddea0e84a422b820cc890e107ef573bd5b5cd84967b7035de47d38"
         },
         "recordedDirentsInputs": {},
         "envVariables": {},
@@ -292,7 +292,8 @@
                 "{ \"repo_url\": \"https://repo1.maven.org/maven2\" }"
               ],
               "artifacts": [
-                "{ \"group\": \"org.seleniumhq.selenium\", \"artifact\": \"selenium-java\", \"version\": \"4.16.1\" }",
+                "{ \"group\": \"com.typesafe\", \"artifact\": \"config\", \"version\": \"1.4.3\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http-core_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_2.13\", \"version\": \"1.0.1\" }",
@@ -303,14 +304,15 @@
                 "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-effect_2.13\", \"version\": \"3.5.4\" }",
                 "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-effect-kernel_2.13\", \"version\": \"3.5.4\" }",
                 "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-core_2.13\", \"version\": \"2.12.0\" }",
-                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-ember-client_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"org.scala-lang\", \"artifact\": \"scala-library\", \"version\": \"2.13.12\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-core_2.13\", \"version\": \"1.0.0-M41\" }",
                 "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-ember-server_2.13\", \"version\": \"1.0.0-M41\" }",
                 "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-dsl_2.13\", \"version\": \"1.0.0-M41\" }",
-                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-circe_2.13\", \"version\": \"1.0.0-M41\" }",
                 "{ \"group\": \"io.circe\", \"artifact\": \"circe-core_2.13\", \"version\": \"0.14.7\" }",
-                "{ \"group\": \"io.circe\", \"artifact\": \"circe-generic_2.13\", \"version\": \"0.14.7\" }",
                 "{ \"group\": \"io.circe\", \"artifact\": \"circe-literal_2.13\", \"version\": \"0.14.7\" }",
                 "{ \"group\": \"org.typelevel\", \"artifact\": \"log4cats-slf4j_2.13\", \"version\": \"2.7.0\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"log4cats-core_2.13\", \"version\": \"2.7.0\" }",
+                "{ \"group\": \"co.fs2\", \"artifact\": \"fs2-io_2.13\", \"version\": \"3.10.2\" }",
                 "{ \"group\": \"com.comcast\", \"artifact\": \"ip4s-core_2.13\", \"version\": \"3.5.0\" }"
               ],
               "fail_on_missing_checksum": true,
@@ -320,7 +322,7 @@
               "generate_compat_repositories": false,
               "version_conflict_policy": "default",
               "override_targets": {},
-              "strict_visibility": false,
+              "strict_visibility": true,
               "strict_visibility_value": [
                 "@@//visibility:private"
               ],
@@ -386,17 +388,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/netty-nio-client/2.25.23/netty-nio-client-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/netty-nio-client/2.25.23/netty-nio-client-2.25.23.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_support_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "da08cfd02d0afab7d7f707aec5e94cfa0ea46825957d198e6d308f48a178293f",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-support/4.16.1/selenium-support-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-support/4.16.1/selenium-support-4.16.1-sources.jar"
             }
           },
           "org_slf4j_log4j_over_slf4j_2_0_12": {
@@ -465,28 +456,6 @@
               "downloaded_file_path": "v1/org/conscrypt/conscrypt-openjdk-uber/2.5.2/conscrypt-openjdk-uber-2.5.2-sources.jar"
             }
           },
-          "io_opentelemetry_opentelemetry_context_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "ec94d8667994415dd696098addcf131d7793580b1621f107490be18d374cd5c8",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0-sources.jar"
-            }
-          },
-          "io_circe_circe_jawn_2_13_0_14_6": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "195876a433cc6be76546fd8aa35a7fe75c76969d2e6deacc9be0490d273f498e",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/circe/circe-jawn_2.13/0.14.6/circe-jawn_2.13-0.14.6.jar"
-              ],
-              "downloaded_file_path": "v1/io/circe/circe-jawn_2.13/0.14.6/circe-jawn_2.13-0.14.6.jar"
-            }
-          },
           "org_reactivestreams_reactive_streams_1_0_4": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -496,17 +465,6 @@
                 "https://repo1.maven.org/maven2/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar"
               ],
               "downloaded_file_path": "v1/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_chromium_driver_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "f0142a097c7e77280666ae421df8483e9ccc36a1314abaac9ea1c23d325a6f65",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1.jar"
             }
           },
           "io_grpc_grpc_protobuf_1_63_0": {
@@ -674,6 +632,17 @@
               "downloaded_file_path": "v1/io/netty/netty-codec-http2/4.1.108.Final/netty-codec-http2-4.1.108.Final-sources.jar"
             }
           },
+          "co_fs2_fs2_core_2_13_3_10_2": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "ea3e71ea399dccd873aace4eb9880259b68c84c8038aca65fac7b83416638873",
+              "urls": [
+                "https://repo1.maven.org/maven2/co/fs2/fs2-core_2.13/3.10.2/fs2-core_2.13-3.10.2.jar"
+              ],
+              "downloaded_file_path": "v1/co/fs2/fs2-core_2.13/3.10.2/fs2-core_2.13-3.10.2.jar"
+            }
+          },
           "org_eclipse_xtend_org_eclipse_xtend_lib_macro_jar_sources_2_28_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -707,17 +676,6 @@
               "downloaded_file_path": "v1/org/jetbrains/annotations/23.0.0/annotations-23.0.0-sources.jar"
             }
           },
-          "dev_failsafe_failsafe_jar_sources_3_3_2": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "06ec410527503e74734d656e8cc1934aa6fef44ddd89dd4df13cb11b2bd83a9b",
-              "urls": [
-                "https://repo1.maven.org/maven2/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2-sources.jar"
-              ],
-              "downloaded_file_path": "v1/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2-sources.jar"
-            }
-          },
           "org_apache_maven_resolver_maven_resolver_api_1_9_18": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -727,39 +685,6 @@
                 "https://repo1.maven.org/maven2/org/apache/maven/resolver/maven-resolver-api/1.9.18/maven-resolver-api-1.9.18.jar"
               ],
               "downloaded_file_path": "v1/org/apache/maven/resolver/maven-resolver-api/1.9.18/maven-resolver-api-1.9.18.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_support_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "9b4f7711fead79f78aa0bd14c1142e2622695ab8e4aa81b8441875fb3dfea299",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-support/4.16.1/selenium-support-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-support/4.16.1/selenium-support-4.16.1.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_common_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "1fcbaba15dbb90babab4db045d10d1da4812bee17ae04dbd7b2d474c13d044da",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0-sources.jar"
-            }
-          },
-          "org_http4s_http4s_circe_2_13_1_0_0_M41": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "6e47d7dc890b19ff372e08e132a315b815fb6727328da86ff9ff28e5e6aec163",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/http4s/http4s-circe_2.13/1.0.0-M41/http4s-circe_2.13-1.0.0-M41.jar"
-              ],
-              "downloaded_file_path": "v1/org/http4s/http4s-circe_2.13/1.0.0-M41/http4s-circe_2.13-1.0.0-M41.jar"
             }
           },
           "org_eclipse_xtext_org_eclipse_xtext_xbase_lib_jar_sources_2_28_0": {
@@ -782,17 +707,6 @@
                 "https://repo1.maven.org/maven2/com/google/cloud/google-cloud-core/2.36.1/google-cloud-core-2.36.1.jar"
               ],
               "downloaded_file_path": "v1/com/google/cloud/google-cloud-core/2.36.1/google-cloud-core-2.36.1.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_common_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "cc48f08411fa5964f00219593293adb4bd6e2b6cb13327eec492ac1105f72c78",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-common/1.28.0/opentelemetry-sdk-common-1.28.0.jar"
             }
           },
           "software_amazon_awssdk_s3_2_25_23": {
@@ -949,28 +863,6 @@
               "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-databind/2.17.0/jackson-databind-2.17.0-sources.jar"
             }
           },
-          "org_http4s_http4s_circe_2_13_jar_sources_1_0_0_M41": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "ecd9f79207e3d658472c3384fdcd3c954391255577fad9fee5f8b5026b031c04",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/http4s/http4s-circe_2.13/1.0.0-M41/http4s-circe_2.13-1.0.0-M41-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/http4s/http4s-circe_2.13/1.0.0-M41/http4s-circe_2.13-1.0.0-M41-sources.jar"
-            }
-          },
-          "org_apache_commons_commons_exec_jar_sources_1_3": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "c121d8e70010092bafc56f358e7259ac484653db595aafea1e67a040f51aea66",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/commons/commons-exec/1.3/commons-exec-1.3-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/commons/commons-exec/1.3/commons-exec-1.3-sources.jar"
-            }
-          },
           "org_typelevel_cats_parse_2_13_1_0_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1013,17 +905,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/aws-core/2.25.23/aws-core-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/aws-core/2.25.23/aws-core-2.25.23.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_devtools_v85_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "0608e78b439cc005b1f7bf9e876807e5da3e6ad26f73744ef5dbd53d33fd8a38",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-devtools-v85/4.16.1/selenium-devtools-v85-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-devtools-v85/4.16.1/selenium-devtools-v85-4.16.1-sources.jar"
             }
           },
           "com_comcast_ip4s_core_2_13_3_5_0": {
@@ -1070,17 +951,6 @@
               "downloaded_file_path": "v1/com/google/googlejavaformat/google-java-format/1.22.0/google-java-format-1.22.0.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_java_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "ac55f6adf70b3963cd15ebdd4e25e449ee6d6d2b3fcd9e99a6b519a9216dc965",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-java/4.16.1/selenium-java-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-java/4.16.1/selenium-java-4.16.1-sources.jar"
-            }
-          },
           "org_apache_commons_commons_lang3_3_11": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1101,17 +971,6 @@
                 "https://repo1.maven.org/maven2/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11-sources.jar"
               ],
               "downloaded_file_path": "v1/org/apache/commons/commons-lang3/3.11/commons-lang3-3.11-sources.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_edge_driver_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "a5b6392939c378dfa1393e7712df1482acf30980bc8be912b9775737d2d5ffee",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1-sources.jar"
             }
           },
           "com_comcast_ip4s_core_2_13_jar_sources_3_5_0": {
@@ -1147,39 +1006,6 @@
               "downloaded_file_path": "v1/com/google/code/gson/gson/2.10.1/gson-2.10.1-sources.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_chrome_driver_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "bb4abd1474a0199b1963acdcfb05d214feacc29b7257be782ecda24801c1acca",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-chrome-driver/4.16.1/selenium-chrome-driver-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-chrome-driver/4.16.1/selenium-chrome-driver-4.16.1-sources.jar"
-            }
-          },
-          "io_circe_circe_generic_2_13_0_14_7": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "5174660e32418e57f32757d14a241d1aeaaf14c4f60443677271fd9244c0b8a0",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/circe/circe-generic_2.13/0.14.7/circe-generic_2.13-0.14.7.jar"
-              ],
-              "downloaded_file_path": "v1/io/circe/circe-generic_2.13/0.14.7/circe-generic_2.13-0.14.7.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_logs_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "942f0ae020de37510ede5066f9b53ebf14c9fb3974332fbc04022c38c5219871",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0.jar"
-            }
-          },
           "com_google_auto_value_auto_value_annotations_1_10_4": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1200,17 +1026,6 @@
                 "https://repo1.maven.org/maven2/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1.jar"
               ],
               "downloaded_file_path": "v1/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_devtools_v119_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "f735d19c535c5b9b967b337af2b1c299378ef43bc5006b379c1cca84f7aa584b",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-devtools-v119/4.16.1/selenium-devtools-v119-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-devtools-v119/4.16.1/selenium-devtools-v119-4.16.1-sources.jar"
             }
           },
           "com_google_inject_guice_jar_sources_5_1_0": {
@@ -1404,28 +1219,6 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/regions/2.25.23/regions-2.25.23.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_safari_driver_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "9f77cde5e3e3ddba28e347a35cfd565f549bcbef719ed10fd7b3937027c3ca8f",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1.jar"
-            }
-          },
-          "io_circe_circe_generic_2_13_jar_sources_0_14_7": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "ad08275c85d0c34be30ff30cd21dcfc91911d09bcabb481d5071407d9f2566ce",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/circe/circe-generic_2.13/0.14.7/circe-generic_2.13-0.14.7-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/circe/circe-generic_2.13/0.14.7/circe-generic_2.13-0.14.7-sources.jar"
-            }
-          },
           "com_google_auth_google_auth_library_oauth2_http_1_23_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1492,17 +1285,6 @@
               "downloaded_file_path": "v1/org/slf4j/jcl-over-slf4j/1.7.36/jcl-over-slf4j-1.7.36.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_devtools_v120_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "2f13388fdbb2ef24c51f9889968edf4b6c5e65312d0e5bec890e5d38761d10c9",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-devtools-v120/4.16.1/selenium-devtools-v120-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-devtools-v120/4.16.1/selenium-devtools-v120-4.16.1-sources.jar"
-            }
-          },
           "software_amazon_awssdk_http_auth_aws_jar_sources_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1534,17 +1316,6 @@
                 "https://repo1.maven.org/maven2/io/grpc/grpc-auth/1.62.2/grpc-auth-1.62.2-sources.jar"
               ],
               "downloaded_file_path": "v1/io/grpc/grpc-auth/1.62.2/grpc-auth-1.62.2-sources.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_extension_autoconfigure_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "214d79aeb63b9994f92347c5f0ef9e0ae9963f1472b081806eea9f0d8033b227",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0-sources.jar"
             }
           },
           "com_google_auth_google_auth_library_credentials_1_23_0": {
@@ -1811,6 +1582,17 @@
               "downloaded_file_path": "v1/org/typelevel/case-insensitive_2.13/1.4.0/case-insensitive_2.13-1.4.0-sources.jar"
             }
           },
+          "co_fs2_fs2_core_2_13_jar_sources_3_10_2": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "2714b7d3bc8b814df60ab9e55137423d53208b2cfbdf43ec7f1beb95635a3cf1",
+              "urls": [
+                "https://repo1.maven.org/maven2/co/fs2/fs2-core_2.13/3.10.2/fs2-core_2.13-3.10.2-sources.jar"
+              ],
+              "downloaded_file_path": "v1/co/fs2/fs2-core_2.13/3.10.2/fs2-core_2.13-3.10.2-sources.jar"
+            }
+          },
           "com_fasterxml_jackson_core_jackson_databind_2_17_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1866,15 +1648,15 @@
               "downloaded_file_path": "v1/io/grpc/grpc-protobuf/1.62.2/grpc-protobuf-1.62.2-sources.jar"
             }
           },
-          "com_typesafe_config_1_4_2": {
+          "com_typesafe_config_1_4_3": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
             "attributes": {
-              "sha256": "0076c249b4387d8369146528fd5dacb3efba098dc02ecf9ac81debdfc2e12fd5",
+              "sha256": "8ada4c185ce72416712d63e0b5afdc5f009c0cdf405e5f26efecdf156aa5dfb6",
               "urls": [
-                "https://repo1.maven.org/maven2/com/typesafe/config/1.4.2/config-1.4.2.jar"
+                "https://repo1.maven.org/maven2/com/typesafe/config/1.4.3/config-1.4.3.jar"
               ],
-              "downloaded_file_path": "v1/com/typesafe/config/1.4.2/config-1.4.2.jar"
+              "downloaded_file_path": "v1/com/typesafe/config/1.4.3/config-1.4.3.jar"
             }
           },
           "io_netty_netty_transport_classes_epoll_jar_sources_4_1_108_Final": {
@@ -1888,17 +1670,6 @@
               "downloaded_file_path": "v1/io/netty/netty-transport-classes-epoll/4.1.108.Final/netty-transport-classes-epoll-4.1.108.Final-sources.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_chromium_driver_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "3d719377851c1f2d62bcd5e9fcd4e875f9dc4c63a9b798744257193823abae2d",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-chromium-driver/4.16.1/selenium-chromium-driver-4.16.1-sources.jar"
-            }
-          },
           "io_grpc_grpc_googleapis_1_62_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1910,17 +1681,6 @@
               "downloaded_file_path": "v1/io/grpc/grpc-googleapis/1.62.2/grpc-googleapis-1.62.2.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_devtools_v120_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "281b39cbfdf990d9fc2a0309d13ba6a1a339d4d00c28685d51b0072664c6c7ad",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-devtools-v120/4.16.1/selenium-devtools-v120-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-devtools-v120/4.16.1/selenium-devtools-v120-4.16.1.jar"
-            }
-          },
           "com_google_j2objc_j2objc_annotations_jar_sources_2_8": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -1930,17 +1690,6 @@
                 "https://repo1.maven.org/maven2/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8-sources.jar"
               ],
               "downloaded_file_path": "v1/com/google/j2objc/j2objc-annotations/2.8/j2objc-annotations-2.8-sources.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_api_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "34370bca50cdf03764ef8ee5e676cb3a75cc0e2f8e4882027fa0bcc83a89ab16",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0-sources.jar"
             }
           },
           "software_amazon_awssdk_profiles_2_25_23": {
@@ -1987,17 +1736,6 @@
               "downloaded_file_path": "v1/org/jetbrains/kotlin/kotlin-reflect/1.6.21/kotlin-reflect-1.6.21-sources.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_devtools_v119_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "9d3cbcab7e644a98ccd5ee92fa55fe5ea833ee291325d2ef870a46bc084dac98",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-devtools-v119/4.16.1/selenium-devtools-v119-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-devtools-v119/4.16.1/selenium-devtools-v119-4.16.1.jar"
-            }
-          },
           "software_amazon_eventstream_eventstream_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2007,17 +1745,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/eventstream/eventstream/1.0.1/eventstream-1.0.1.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/eventstream/eventstream/1.0.1/eventstream-1.0.1.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_context_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "7e596726da322f7deac8fb6696dc36a98bda4a1d294eeb1d8b03054166d34d02",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-context/1.28.0/opentelemetry-context-1.28.0.jar"
             }
           },
           "software_amazon_awssdk_apache_client_jar_sources_2_25_23": {
@@ -2073,17 +1800,6 @@
                 "https://repo1.maven.org/maven2/org/eclipse/lsp4j/org.eclipse.lsp4j.generator/0.20.1/org.eclipse.lsp4j.generator-0.20.1.jar"
               ],
               "downloaded_file_path": "v1/org/eclipse/lsp4j/org.eclipse.lsp4j.generator/0.20.1/org.eclipse.lsp4j.generator-0.20.1.jar"
-            }
-          },
-          "org_http4s_http4s_ember_client_2_13_1_0_0_M41": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "a7ab6e23f87c87615c2c035a7f17e8b10808928e2b7e967690cb188d43550c16",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/http4s/http4s-ember-client_2.13/1.0.0-M41/http4s-ember-client_2.13-1.0.0-M41.jar"
-              ],
-              "downloaded_file_path": "v1/org/http4s/http4s-ember-client_2.13/1.0.0-M41/http4s-ember-client_2.13-1.0.0-M41.jar"
             }
           },
           "io_grpc_grpc_stub_1_62_2": {
@@ -2183,39 +1899,6 @@
                 "https://repo1.maven.org/maven2/org/http4s/http4s-core_2.13/1.0.0-M41/http4s-core_2.13-1.0.0-M41.jar"
               ],
               "downloaded_file_path": "v1/org/http4s/http4s-core_2.13/1.0.0-M41/http4s-core_2.13-1.0.0-M41.jar"
-            }
-          },
-          "org_http4s_http4s_client_2_13_jar_sources_1_0_0_M41": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "02c673caa0bd44fe3e67e0d616a9ee8cf6a4900b8f8534c0006ec09caf344201",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/http4s/http4s-client_2.13/1.0.0-M41/http4s-client_2.13-1.0.0-M41-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/http4s/http4s-client_2.13/1.0.0-M41/http4s-client_2.13-1.0.0-M41-sources.jar"
-            }
-          },
-          "org_typelevel_jawn_fs2_2_13_jar_sources_2_4_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "2bbe8c53c9c78cfa1249017447a4dab4c14af073ac33f6d7c40d680a2ea3a481",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/typelevel/jawn-fs2_2.13/2.4.0/jawn-fs2_2.13-2.4.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/typelevel/jawn-fs2_2.13/2.4.0/jawn-fs2_2.13-2.4.0-sources.jar"
-            }
-          },
-          "org_typelevel_keypool_2_13_jar_sources_0_4_9": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "21edc7507ccc540958096e11111b65504dae81c6dfb1af8d3a8d97d4dfbe2993",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/typelevel/keypool_2.13/0.4.9/keypool_2.13-0.4.9-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/typelevel/keypool_2.13/0.4.9/keypool_2.13-0.4.9-sources.jar"
             }
           },
           "org_apache_maven_shared_maven_shared_utils_jar_sources_3_3_4": {
@@ -2416,17 +2099,6 @@
               "downloaded_file_path": "v1/io/grpc/grpc-stub/1.63.0/grpc-stub-1.63.0.jar"
             }
           },
-          "org_typelevel_keypool_2_13_0_4_9": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "6cd3d9bf5e6ab8e72cf1e603fa6dfb54e063a0eb363b07a257e6f357108e7c71",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/typelevel/keypool_2.13/0.4.9/keypool_2.13-0.4.9.jar"
-              ],
-              "downloaded_file_path": "v1/org/typelevel/keypool_2.13/0.4.9/keypool_2.13-0.4.9.jar"
-            }
-          },
           "org_codehaus_plexus_plexus_utils_3_5_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2480,17 +2152,6 @@
                 "https://repo1.maven.org/maven2/io/opencensus/opencensus-proto/0.2.0/opencensus-proto-0.2.0.jar"
               ],
               "downloaded_file_path": "v1/io/opencensus/opencensus-proto/0.2.0/opencensus-proto-0.2.0.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_api_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "ae011d5db602a1ab5aba49a32d13264323f3f153db9a5efa55705ca060d77a05",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-api/1.28.0/opentelemetry-api-1.28.0.jar"
             }
           },
           "com_twitter_hpack_jar_sources_1_0_2": {
@@ -2603,17 +2264,6 @@
               "downloaded_file_path": "v1/org/http4s/http4s-server_2.13/1.0.0-M41/http4s-server_2.13-1.0.0-M41-sources.jar"
             }
           },
-          "org_http4s_http4s_ember_client_2_13_jar_sources_1_0_0_M41": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "f69b97ec8c5ee813c05cb7b10d34bbb1fcb1a0931d60fc5f3faa6985ba4c5f1a",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/http4s/http4s-ember-client_2.13/1.0.0-M41/http4s-ember-client_2.13-1.0.0-M41-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/http4s/http4s-ember-client_2.13/1.0.0-M41/http4s-ember-client_2.13-1.0.0-M41-sources.jar"
-            }
-          },
           "org_apache_pekko_pekko_slf4j_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2724,17 +2374,6 @@
               "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-core/2.17.0/jackson-core-2.17.0-sources.jar"
             }
           },
-          "io_opentelemetry_opentelemetry_sdk_metrics_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "1e88e3b6426662d2dbe7424738c65c366d17f6501489fe9ed1c13375fbd3e75d",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0.jar"
-            }
-          },
           "org_apache_maven_maven_resolver_provider_3_9_6": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2755,39 +2394,6 @@
                 "https://repo1.maven.org/maven2/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.8.0/kotlinx-coroutines-core-1.8.0-sources.jar"
               ],
               "downloaded_file_path": "v1/org/jetbrains/kotlinx/kotlinx-coroutines-core/1.8.0/kotlinx-coroutines-core-1.8.0-sources.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_safari_driver_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "8d2f3612e61280f237f393629aec8df2412d4230c88a5792ad168aa89bd11272",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-safari-driver/4.16.1/selenium-safari-driver-4.16.1-sources.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "e34096a7782f1f925a4465f260196d67aa3b3a6baf856ddb0cbba02167409f66",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0-sources.jar"
-            }
-          },
-          "org_typelevel_jawn_parser_2_13_jar_sources_1_5_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "c89b692c2810835a67a7c9a005a878a96089d7564ce07b2ce7e167d49cce2b57",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/typelevel/jawn-parser_2.13/1.5.1/jawn-parser_2.13-1.5.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/typelevel/jawn-parser_2.13/1.5.1/jawn-parser_2.13-1.5.1-sources.jar"
             }
           },
           "io_netty_netty_buffer_4_1_108_Final": {
@@ -2832,17 +2438,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/protocol-core/2.25.23/protocol-core-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/protocol-core/2.25.23/protocol-core-2.25.23.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_extension_autoconfigure_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "481f3791df11d4b107d82532587f1a2a03997efec80aeb16bb0acbef952d853d",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure/1.28.0/opentelemetry-sdk-extension-autoconfigure-1.28.0.jar"
             }
           },
           "ch_qos_logback_logback_classic_1_3_6": {
@@ -2922,17 +2517,6 @@
               "downloaded_file_path": "v1/com/google/api/gax-httpjson/2.46.1/gax-httpjson-2.46.1.jar"
             }
           },
-          "io_opentelemetry_opentelemetry_sdk_extension_autoconfigure_spi_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "1df92bf83aee67c3686f1808ec5d5399926042867a069ce0262091dab8960e6e",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0.jar"
-            }
-          },
           "org_eclipse_lsp4j_org_eclipse_lsp4j_generator_jar_sources_0_20_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -2942,17 +2526,6 @@
                 "https://repo1.maven.org/maven2/org/eclipse/lsp4j/org.eclipse.lsp4j.generator/0.20.1/org.eclipse.lsp4j.generator-0.20.1-sources.jar"
               ],
               "downloaded_file_path": "v1/org/eclipse/lsp4j/org.eclipse.lsp4j.generator/0.20.1/org.eclipse.lsp4j.generator-0.20.1-sources.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "6996e81091fc0cdf1d14b8cca7ed6d1f82412cb6bde387151117ef507c6b0418",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk/1.28.0/opentelemetry-sdk-1.28.0.jar"
             }
           },
           "com_google_apis_google_api_services_storage_v1_rev20240311_2_0_0": {
@@ -2999,17 +2572,6 @@
               "downloaded_file_path": "v1/org/jetbrains/kotlin/kotlin-stdlib/1.9.21/kotlin-stdlib-1.9.21-sources.jar"
             }
           },
-          "io_opentelemetry_opentelemetry_semconv_jar_sources_1_28_0_alpha": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "80a5d85f3d6e2ea351ebecf426afa47546746ab0989a4982c2fe6d11df3c337a",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha-sources.jar"
-            }
-          },
           "org_apache_pekko_pekko_http_core_2_13_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3041,17 +2603,6 @@
                 "https://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar"
               ],
               "downloaded_file_path": "v1/org/scala-lang/scala-reflect/2.13.12/scala-reflect-2.13.12.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_remote_driver_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "a573f2e215ef23fb9d0e6687fde95ebdc79a971896d3b48548312e5acf504b7d",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1-sources.jar"
             }
           },
           "com_google_guava_failureaccess_jar_sources_1_0_2": {
@@ -3164,17 +2715,6 @@
               "downloaded_file_path": "v1/org/apache/pekko/pekko-actor_2.13/1.0.1/pekko-actor_2.13-1.0.1.jar"
             }
           },
-          "io_opentelemetry_opentelemetry_exporter_logging_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "2a50fc6b63a0b6c27e3e4c034f9c4f83977f74bec044de203e8d2986e10973d2",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0-sources.jar"
-            }
-          },
           "org_typelevel_log4cats_core_2_13_2_7_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3230,28 +2770,6 @@
               "downloaded_file_path": "v1/org/jetbrains/kotlinx/kotlinx-coroutines-core-jvm/1.8.0/kotlinx-coroutines-core-jvm-1.8.0.jar"
             }
           },
-          "io_opentelemetry_opentelemetry_sdk_extension_autoconfigure_spi_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "82cd1b19e0f3753e7779001e772da0a2d2df448bff8fd16b161aaa68495cddd7",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-extension-autoconfigure-spi/1.28.0/opentelemetry-sdk-extension-autoconfigure-spi-1.28.0-sources.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_logs_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "ebd188504796f03a12547b19d786b4f2c489a213c0c1983df30dc9af9562bac0",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-logs/1.28.0/opentelemetry-sdk-logs-1.28.0-sources.jar"
-            }
-          },
           "org_http4s_http4s_crypto_2_13_0_2_4": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3296,6 +2814,17 @@
               "downloaded_file_path": "v1/org/codehaus/plexus/plexus-component-annotations/2.1.0/plexus-component-annotations-2.1.0-sources.jar"
             }
           },
+          "com_typesafe_config_jar_sources_1_4_3": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "d3330505601cc47d97d03349d93dff32c85ec3881b5b168a8881c6af8ceb852a",
+              "urls": [
+                "https://repo1.maven.org/maven2/com/typesafe/config/1.4.3/config-1.4.3-sources.jar"
+              ],
+              "downloaded_file_path": "v1/com/typesafe/config/1.4.3/config-1.4.3-sources.jar"
+            }
+          },
           "org_apache_logging_log4j_log4j_core_jar_sources_2_23_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3318,17 +2847,6 @@
               "downloaded_file_path": "v1/io/perfmark/perfmark-api/0.27.0/perfmark-api-0.27.0-sources.jar"
             }
           },
-          "com_typesafe_config_jar_sources_1_4_2": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "2f1139b6985e24abe09fd05f7b3448dbbcda54854bd490c783cd02fdb82f342f",
-              "urls": [
-                "https://repo1.maven.org/maven2/com/typesafe/config/1.4.2/config-1.4.2-sources.jar"
-              ],
-              "downloaded_file_path": "v1/com/typesafe/config/1.4.2/config-1.4.2-sources.jar"
-            }
-          },
           "org_apache_maven_resolver_maven_resolver_transport_file_jar_sources_1_9_18": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3338,17 +2856,6 @@
                 "https://repo1.maven.org/maven2/org/apache/maven/resolver/maven-resolver-transport-file/1.9.18/maven-resolver-transport-file-1.9.18-sources.jar"
               ],
               "downloaded_file_path": "v1/org/apache/maven/resolver/maven-resolver-transport-file/1.9.18/maven-resolver-transport-file-1.9.18-sources.jar"
-            }
-          },
-          "org_http4s_http4s_client_2_13_1_0_0_M41": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "82c50ca8ec82f5142c08c21c4194011e4a99c26163b108ad0a410b5938592c5b",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/http4s/http4s-client_2.13/1.0.0-M41/http4s-client_2.13-1.0.0-M41.jar"
-              ],
-              "downloaded_file_path": "v1/org/http4s/http4s-client_2.13/1.0.0-M41/http4s-client_2.13-1.0.0-M41.jar"
             }
           },
           "software_amazon_awssdk_http_auth_spi_jar_sources_2_25_23": {
@@ -3437,72 +2944,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/http-auth/2.25.23/http-auth-2.25.23-sources.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/http-auth/2.25.23/http-auth-2.25.23-sources.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_edge_driver_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "69031d2eab135ababcbf4cf03131c4e7383957726d2ede44bd6561eca4560555",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-edge-driver/4.16.1/selenium-edge-driver-4.16.1.jar"
-            }
-          },
-          "co_fs2_fs2_core_2_13_3_9_4": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "5a2cac3de102a566e358c039200fc408c7ca45c49f681450b8ff68f7f765a772",
-              "urls": [
-                "https://repo1.maven.org/maven2/co/fs2/fs2-core_2.13/3.9.4/fs2-core_2.13-3.9.4.jar"
-              ],
-              "downloaded_file_path": "v1/co/fs2/fs2-core_2.13/3.9.4/fs2-core_2.13-3.9.4.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_exporter_logging_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "22e7e065cd90410bf98b3d90707a27e5d40e916c979cbba1a93e1471d816fbda",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-exporter-logging/1.28.0/opentelemetry-exporter-logging-1.28.0.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_firefox_driver_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "52ef75d127c2a8afd282c2e574f2a747d840410adb701b8aef503788e782eb66",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1-sources.jar"
-            }
-          },
-          "org_typelevel_jawn_fs2_2_13_2_4_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "87fe273c00f812208f2e6afecd4b356849b1dff3b99c94ab59dda078db9eb4d5",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/typelevel/jawn-fs2_2.13/2.4.0/jawn-fs2_2.13-2.4.0.jar"
-              ],
-              "downloaded_file_path": "v1/org/typelevel/jawn-fs2_2.13/2.4.0/jawn-fs2_2.13-2.4.0.jar"
-            }
-          },
-          "org_typelevel_jawn_parser_2_13_1_5_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "f875e84252f13ceba7589b37f32f6346b04b8c641c04b50c6edb589cfd324539",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/typelevel/jawn-parser_2.13/1.5.1/jawn-parser_2.13-1.5.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/typelevel/jawn-parser_2.13/1.5.1/jawn-parser_2.13-1.5.1.jar"
             }
           },
           "org_slf4j_jcl_over_slf4j_jar_sources_1_7_36": {
@@ -3664,6 +3105,17 @@
               "ignore_empty_files": false
             }
           },
+          "co_fs2_fs2_io_2_13_3_10_2": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "9c7cd92589d262533be24472227ca2b67bb55f2b85416073abc69343f3f20977",
+              "urls": [
+                "https://repo1.maven.org/maven2/co/fs2/fs2-io_2.13/3.10.2/fs2-io_2.13-3.10.2.jar"
+              ],
+              "downloaded_file_path": "v1/co/fs2/fs2-io_2.13/3.10.2/fs2-io_2.13-3.10.2.jar"
+            }
+          },
           "org_checkerframework_checker_qual_3_42_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3684,17 +3136,6 @@
                 "https://repo1.maven.org/maven2/io/grpc/grpc-xds/1.62.2/grpc-xds-1.62.2.jar"
               ],
               "downloaded_file_path": "v1/io/grpc/grpc-xds/1.62.2/grpc-xds-1.62.2.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_extension_incubator_1_28_0_alpha": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "99d13fed517329871cc66aed24abc018816f0537f78cd366a36dce1a75082f17",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha.jar"
             }
           },
           "com_google_api_gax_grpc_jar_sources_2_46_1": {
@@ -3730,17 +3171,6 @@
               "downloaded_file_path": "v1/com/google/protobuf/protobuf-java/3.25.3/protobuf-java-3.25.3-sources.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_devtools_v118_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "28d3b830e1452483b1cea68738dba8b3eaeb0dc26ad3640bddfa2efcaa3ecb4c",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-devtools-v118/4.16.1/selenium-devtools-v118-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-devtools-v118/4.16.1/selenium-devtools-v118-4.16.1.jar"
-            }
-          },
           "com_google_protobuf_protobuf_java_jar_sources_3_25_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3774,17 +3204,6 @@
               "downloaded_file_path": "v1/org/typelevel/cats-effect-kernel_2.13/3.5.4/cats-effect-kernel_2.13-3.5.4-sources.jar"
             }
           },
-          "io_opentelemetry_opentelemetry_api_events_1_28_0_alpha": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "71a9430e027184d7d93c64b076e1b4b1eff9553b87c648560f11cc97f6451d0e",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha.jar"
-            }
-          },
           "org_apache_pekko_pekko_actor_typed_2_13_jar_sources_1_0_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -3816,17 +3235,6 @@
                 "https://repo1.maven.org/maven2/com/google/http-client/google-http-client-gson/1.44.1/google-http-client-gson-1.44.1.jar"
               ],
               "downloaded_file_path": "v1/com/google/http-client/google-http-client-gson/1.44.1/google-http-client-gson-1.44.1.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_trace_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "7654cb16c298aed6650797dbaa26f05e2801c26be6765ef51110ee7a67f0042e",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0-sources.jar"
             }
           },
           "org_apache_maven_resolver_maven_resolver_transport_http_1_9_18": {
@@ -4049,17 +3457,6 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/aws-query-protocol/2.25.23/aws-query-protocol-2.25.23.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_chrome_driver_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "b992dd80c7389bb36f62e7c6469637d4dd45a08b4cdddefe0382294cf761c675",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-chrome-driver/4.16.1/selenium-chrome-driver-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-chrome-driver/4.16.1/selenium-chrome-driver-4.16.1.jar"
-            }
-          },
           "software_amazon_awssdk_annotations_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4069,17 +3466,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/annotations/2.25.23/annotations-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/annotations/2.25.23/annotations-2.25.23.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_firefox_driver_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "14053916d5eb414467d4a85b7d4e727987d7bb5468718c220de7e5f7ca5e748a",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-firefox-driver/4.16.1/selenium-firefox-driver-4.16.1.jar"
             }
           },
           "io_grpc_grpc_inprocess_jar_sources_1_62_2": {
@@ -4113,17 +3499,6 @@
                 "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-api/1.36.0/opentelemetry-api-1.36.0.jar"
               ],
               "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-api/1.36.0/opentelemetry-api-1.36.0.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_os_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "57613d7d2af2f449dc9e97eade7306414ce33f40145118c2d97ebeba9d5f8fed",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-os/4.16.1/selenium-os-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-os/4.16.1/selenium-os-4.16.1-sources.jar"
             }
           },
           "ch_qos_logback_logback_core_jar_sources_1_3_6": {
@@ -4212,17 +3587,6 @@
                 "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14-sources.jar"
               ],
               "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14-sources.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_http_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "f3cc48e69b4e9d1a6d218e343479befdab77ddfc314ef82ae8baa9c9184b994c",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http/4.16.1/selenium-http-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-http/4.16.1/selenium-http-4.16.1-sources.jar"
             }
           },
           "io_grpc_grpc_api_jar_sources_1_62_2": {
@@ -4382,28 +3746,6 @@
               "downloaded_file_path": "v1/org/typelevel/cats-kernel_2.13/2.12.0/cats-kernel_2.13-2.12.0-sources.jar"
             }
           },
-          "org_apache_commons_commons_exec_1_3": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "cb49812dc1bfb0ea4f20f398bcae1a88c6406e213e67f7524fb10d4f8ad9347b",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar"
-              ],
-              "downloaded_file_path": "v1/org/apache/commons/commons-exec/1.3/commons-exec-1.3.jar"
-            }
-          },
-          "co_fs2_fs2_core_2_13_jar_sources_3_9_4": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "8cbf68708b6df5690fc4bc5114791fb5047f706056d0e661e41e4ddedfc3d848",
-              "urls": [
-                "https://repo1.maven.org/maven2/co/fs2/fs2-core_2.13/3.9.4/fs2-core_2.13-3.9.4-sources.jar"
-              ],
-              "downloaded_file_path": "v1/co/fs2/fs2-core_2.13/3.9.4/fs2-core_2.13-3.9.4-sources.jar"
-            }
-          },
           "io_grpc_grpc_protobuf_jar_sources_1_63_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4501,17 +3843,6 @@
                 "https://repo1.maven.org/maven2/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1.jar"
               ],
               "downloaded_file_path": "v1/org/apache/pekko/pekko-stream_2.13/1.0.1/pekko-stream_2.13-1.0.1.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_devtools_v118_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "515bde888ae64b4023fe8ead10cd8524d2082fa9047136ac865047230084b8fc",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-devtools-v118/4.16.1/selenium-devtools-v118-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-devtools-v118/4.16.1/selenium-devtools-v118-4.16.1-sources.jar"
             }
           },
           "com_google_api_grpc_proto_google_iam_v1_jar_sources_1_32_1": {
@@ -4624,17 +3955,6 @@
               "downloaded_file_path": "v1/software/amazon/awssdk/s3/2.25.23/s3-2.25.23-sources.jar"
             }
           },
-          "co_fs2_fs2_io_2_13_3_9_4": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "b197c27003704b5b19cb9e4430e8946498f743109e03d9d1e72a52357ccf3e1b",
-              "urls": [
-                "https://repo1.maven.org/maven2/co/fs2/fs2-io_2.13/3.9.4/fs2-io_2.13-3.9.4.jar"
-              ],
-              "downloaded_file_path": "v1/co/fs2/fs2-io_2.13/3.9.4/fs2-io_2.13-3.9.4.jar"
-            }
-          },
           "javax_annotation_javax_annotation_api_jar_sources_1_3_2": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -4644,17 +3964,6 @@
                 "https://repo1.maven.org/maven2/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2-sources.jar"
               ],
               "downloaded_file_path": "v1/javax/annotation/javax.annotation-api/1.3.2/javax.annotation-api-1.3.2-sources.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_manager_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "72dc1574a2e0d0abefbc75b470d69f566c8ecc89934168cf2d3c9478215ca0d9",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-manager/4.16.1/selenium-manager-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-manager/4.16.1/selenium-manager-4.16.1-sources.jar"
             }
           },
           "com_google_cloud_google_cloud_core_grpc_2_36_1": {
@@ -4677,39 +3986,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/http-auth/2.25.23/http-auth-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/http-auth/2.25.23/http-auth-2.25.23.jar"
-            }
-          },
-          "org_http4s_http4s_jawn_2_13_jar_sources_1_0_0_M41": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "37619c41790d559e8361d51e989727eacf218c332805e30be8b1131094c24fa8",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/http4s/http4s-jawn_2.13/1.0.0-M41/http4s-jawn_2.13-1.0.0-M41-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/http4s/http4s-jawn_2.13/1.0.0-M41/http4s-jawn_2.13-1.0.0-M41-sources.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_remote_driver_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "574d8c5ed7c1da219f250cbe17ccfb93e054a91bf2fb5acf6299c649f294fa17",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-remote-driver/4.16.1/selenium-remote-driver-4.16.1.jar"
-            }
-          },
-          "co_fs2_fs2_io_2_13_jar_sources_3_9_4": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "c6ca82feecc79e7580e7b22ee4e629707189e4e54a8717e199b81f34c6e20146",
-              "urls": [
-                "https://repo1.maven.org/maven2/co/fs2/fs2-io_2.13/3.9.4/fs2-io_2.13-3.9.4-sources.jar"
-              ],
-              "downloaded_file_path": "v1/co/fs2/fs2-io_2.13/3.9.4/fs2-io_2.13-3.9.4-sources.jar"
             }
           },
           "com_google_guava_guava_jar_sources_32_1_3_android": {
@@ -4831,28 +4107,6 @@
                 "https://repo1.maven.org/maven2/software/amazon/awssdk/http-auth-spi/2.25.23/http-auth-spi-2.25.23.jar"
               ],
               "downloaded_file_path": "v1/software/amazon/awssdk/http-auth-spi/2.25.23/http-auth-spi-2.25.23.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_api_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "31b7766403dbc90dfbfff16e1ccdc9f3e08c45be5fcc54501b15b082f9dc76a0",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-api/4.16.1/selenium-api-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-api/4.16.1/selenium-api-4.16.1-sources.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_json_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "e26e8aa12ba74eec2cd646da519a02dff6fa04f940fee987677f39bd8687599f",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-json/4.16.1/selenium-json-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-json/4.16.1/selenium-json-4.16.1.jar"
             }
           },
           "software_amazon_eventstream_eventstream_jar_sources_1_0_1": {
@@ -5020,28 +4274,6 @@
               "downloaded_file_path": "v1/ch/qos/logback/logback-core/1.3.6/logback-core-1.3.6.jar"
             }
           },
-          "io_circe_circe_jawn_2_13_jar_sources_0_14_6": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "24f103be1a6ef246c4c257eeb94e7862e1158eda550203b31ae63d31e3391cad",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/circe/circe-jawn_2.13/0.14.6/circe-jawn_2.13-0.14.6-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/circe/circe-jawn_2.13/0.14.6/circe-jawn_2.13-0.14.6-sources.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_sdk_trace_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "0947477d5e682c940d9117de1e8ecd678b1fcd8e514ea067bc583d9b663fefad",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-trace/1.28.0/opentelemetry-sdk-trace-1.28.0.jar"
-            }
-          },
           "com_fasterxml_jackson_core_jackson_annotations_jar_sources_2_17_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -5084,17 +4316,6 @@
                 "https://repo1.maven.org/maven2/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0-sources.jar"
               ],
               "downloaded_file_path": "v1/com/google/j2objc/j2objc-annotations/3.0.0/j2objc-annotations-3.0.0-sources.jar"
-            }
-          },
-          "org_http4s_http4s_jawn_2_13_1_0_0_M41": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "d04563d1917400dfc2dfb50fde09436fd8332d361b26fbb4b849fa73470ba8d9",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/http4s/http4s-jawn_2.13/1.0.0-M41/http4s-jawn_2.13-1.0.0-M41.jar"
-              ],
-              "downloaded_file_path": "v1/org/http4s/http4s-jawn_2.13/1.0.0-M41/http4s-jawn_2.13-1.0.0-M41.jar"
             }
           },
           "io_opentelemetry_opentelemetry_context_jar_sources_1_36_0": {
@@ -5141,6 +4362,17 @@
               "downloaded_file_path": "v1/org/apache/pekko/pekko-protobuf-v3_2.13/1.0.1/pekko-protobuf-v3_2.13-1.0.1.jar"
             }
           },
+          "co_fs2_fs2_io_2_13_jar_sources_3_10_2": {
+            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
+            "ruleClassName": "http_file",
+            "attributes": {
+              "sha256": "ba02cdf1bae68393ed29f88380cff2863d088eaccb0e723e6a007b60ab831604",
+              "urls": [
+                "https://repo1.maven.org/maven2/co/fs2/fs2-io_2.13/3.10.2/fs2-io_2.13-3.10.2-sources.jar"
+              ],
+              "downloaded_file_path": "v1/co/fs2/fs2-io_2.13/3.10.2/fs2-io_2.13-3.10.2-sources.jar"
+            }
+          },
           "io_grpc_grpc_protobuf_lite_jar_sources_1_63_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -5183,17 +4415,6 @@
                 "https://repo1.maven.org/maven2/com/google/api/grpc/gapic-google-cloud-storage-v2/2.36.1-alpha/gapic-google-cloud-storage-v2-2.36.1-alpha.jar"
               ],
               "downloaded_file_path": "v1/com/google/api/grpc/gapic-google-cloud-storage-v2/2.36.1-alpha/gapic-google-cloud-storage-v2-2.36.1-alpha.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_extension_incubator_jar_sources_1_28_0_alpha": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "9fcc314b56fadcd5c6566e9a4855c3fd82920a8c497ecc209b9aeb0511f2c623",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-extension-incubator/1.28.0-alpha/opentelemetry-extension-incubator-1.28.0-alpha-sources.jar"
             }
           },
           "software_amazon_awssdk_checksums_spi_2_25_23": {
@@ -5240,39 +4461,6 @@
               "downloaded_file_path": "v1/io/netty/netty-resolver/4.1.108.Final/netty-resolver-4.1.108.Final.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_devtools_v85_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "0618dd6a15526fc43d4f22881d28ef02316bdd3ead7fa1a9db0eff82ae7a44fc",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-devtools-v85/4.16.1/selenium-devtools-v85-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-devtools-v85/4.16.1/selenium-devtools-v85-4.16.1.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_os_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "9d2efb4c48a83c73d1aef754308d4cf01c9ef469fad3e5713306d3260e47ea42",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-os/4.16.1/selenium-os-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-os/4.16.1/selenium-os-4.16.1.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_ie_driver_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "17eacf3135d7932ca7096c0756ff1a91260a7a87f6a68eb46f69840a4e31bec3",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-ie-driver/4.16.1/selenium-ie-driver-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-ie-driver/4.16.1/selenium-ie-driver-4.16.1-sources.jar"
-            }
-          },
           "software_amazon_awssdk_aws_xml_protocol_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -5306,28 +4494,6 @@
               "downloaded_file_path": "v1/com/typesafe/ssl-config-core_2.13/0.6.1/ssl-config-core_2.13-0.6.1-sources.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_api_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "814536a9161f4a5deccb53d17909fa992c5f0e5a8d1e15203be99d1bc6619ca6",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-api/4.16.1/selenium-api-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-api/4.16.1/selenium-api-4.16.1.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_ie_driver_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "77715e3ceff748d7c7bfb1b72861df6b856afdb140322187fb686dcdd8d1593a",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-ie-driver/4.16.1/selenium-ie-driver-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-ie-driver/4.16.1/selenium-ie-driver-4.16.1.jar"
-            }
-          },
           "io_grpc_grpc_protobuf_lite_1_63_0": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -5350,17 +4516,6 @@
               "downloaded_file_path": "v1/org/apache/httpcomponents/httpclient/4.5.14/httpclient-4.5.14.jar"
             }
           },
-          "dev_failsafe_failsafe_3_3_2": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "2c5dc879a6dac7ea3a7b29d795e27bd49b8e7908b05c2f3e56053c19d79850f5",
-              "urls": [
-                "https://repo1.maven.org/maven2/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar"
-              ],
-              "downloaded_file_path": "v1/dev/failsafe/failsafe/3.3.2/failsafe-3.3.2.jar"
-            }
-          },
           "software_amazon_awssdk_arns_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -5381,17 +4536,6 @@
                 "https://repo1.maven.org/maven2/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14.jar"
               ],
               "downloaded_file_path": "v1/org/scala-lang/scala-library/2.13.14/scala-library-2.13.14.jar"
-            }
-          },
-          "com_google_auto_service_auto_service_annotations_1_1_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "16a76dd00a2650568447f5d6e3a9e2c809d9a42367d56b45215cfb89731f4d24",
-              "urls": [
-                "https://repo1.maven.org/maven2/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar"
-              ],
-              "downloaded_file_path": "v1/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1.jar"
             }
           },
           "org_apache_pekko_pekko_actor_typed_2_13_1_0_1": {
@@ -5460,17 +4604,6 @@
               "downloaded_file_path": "v1/org/typelevel/case-insensitive_2.13/1.4.0/case-insensitive_2.13-1.4.0.jar"
             }
           },
-          "io_opentelemetry_opentelemetry_semconv_1_28_0_alpha": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "9ef021e5bad5789ca48594a3cedb8aaeb00f2f70130e86d5d6337cb71002a88d",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-semconv/1.28.0-alpha/opentelemetry-semconv-1.28.0-alpha.jar"
-            }
-          },
           "org_apache_logging_log4j_log4j_core_2_23_1": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -5491,17 +4624,6 @@
                 "https://repo1.maven.org/maven2/com/google/apis/google-api-services-storage/v1-rev20240311-2.0.0/google-api-services-storage-v1-rev20240311-2.0.0-sources.jar"
               ],
               "downloaded_file_path": "v1/com/google/apis/google-api-services-storage/v1-rev20240311-2.0.0/google-api-services-storage-v1-rev20240311-2.0.0-sources.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_json_jar_sources_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "8819e170a8a909e679d689d43587bdd63d1e7552cc639241f6271832506c408c",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-json/4.16.1/selenium-json-4.16.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-json/4.16.1/selenium-json-4.16.1-sources.jar"
             }
           },
           "io_grpc_grpc_protobuf_lite_jar_sources_1_62_2": {
@@ -5612,17 +4734,6 @@
                 "https://repo1.maven.org/maven2/io/grpc/grpc-protobuf-lite/1.62.2/grpc-protobuf-lite-1.62.2.jar"
               ],
               "downloaded_file_path": "v1/io/grpc/grpc-protobuf-lite/1.62.2/grpc-protobuf-lite-1.62.2.jar"
-            }
-          },
-          "com_google_auto_service_auto_service_annotations_jar_sources_1_1_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "371bc06d861278f8048157b5172fd5e830410cdd9cddf1cca02cd9ead7b64fff",
-              "urls": [
-                "https://repo1.maven.org/maven2/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1-sources.jar"
-              ],
-              "downloaded_file_path": "v1/com/google/auto/service/auto-service-annotations/1.1.1/auto-service-annotations-1.1.1-sources.jar"
             }
           },
           "io_grpc_grpc_context_jar_sources_1_62_2": {
@@ -5839,17 +4950,6 @@
               "downloaded_file_path": "v1/io/grpc/grpc-api/1.62.2/grpc-api-1.62.2.jar"
             }
           },
-          "io_opentelemetry_opentelemetry_sdk_metrics_jar_sources_1_28_0": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "3734bd6a8a8cbdf16ef30ef56e6507fe6cfbdaf7a0c337b96f90ae2f1147c2e1",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-sdk-metrics/1.28.0/opentelemetry-sdk-metrics-1.28.0-sources.jar"
-            }
-          },
           "software_amazon_awssdk_crt_core_jar_sources_2_25_23": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -5870,17 +4970,6 @@
                 "https://repo1.maven.org/maven2/org/typelevel/cats-effect-std_2.13/3.5.4/cats-effect-std_2.13-3.5.4.jar"
               ],
               "downloaded_file_path": "v1/org/typelevel/cats-effect-std_2.13/3.5.4/cats-effect-std_2.13-3.5.4.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_java_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "21c80e16f7e7e1d21f0af429e76dcca19d20d51e5464e3c91fc930d4e401a286",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-java/4.16.1/selenium-java-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-java/4.16.1/selenium-java-4.16.1.jar"
             }
           },
           "org_checkerframework_checker_qual_3_37_0": {
@@ -5982,17 +5071,6 @@
               "downloaded_file_path": "v1/io/netty/netty-buffer/4.1.108.Final/netty-buffer-4.1.108.Final-sources.jar"
             }
           },
-          "org_seleniumhq_selenium_selenium_http_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "f83ac984f58c635f27dcbe113e92bfeffd2bcaa5d482a7501b9429a8a6debcfe",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-http/4.16.1/selenium-http-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-http/4.16.1/selenium-http-4.16.1.jar"
-            }
-          },
           "net_bytebuddy_byte_buddy_1_14_9": {
             "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
             "ruleClassName": "http_file",
@@ -6047,7 +5125,8 @@
               ],
               "boms": [],
               "artifacts": [
-                "{ \"group\": \"org.seleniumhq.selenium\", \"artifact\": \"selenium-java\", \"version\": \"4.16.1\" }",
+                "{ \"group\": \"com.typesafe\", \"artifact\": \"config\", \"version\": \"1.4.3\" }",
+                "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http-core_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-http_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor_2.13\", \"version\": \"1.0.1\" }",
                 "{ \"group\": \"org.apache.pekko\", \"artifact\": \"pekko-actor-typed_2.13\", \"version\": \"1.0.1\" }",
@@ -6058,14 +5137,15 @@
                 "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-effect_2.13\", \"version\": \"3.5.4\" }",
                 "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-effect-kernel_2.13\", \"version\": \"3.5.4\" }",
                 "{ \"group\": \"org.typelevel\", \"artifact\": \"cats-core_2.13\", \"version\": \"2.12.0\" }",
-                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-ember-client_2.13\", \"version\": \"1.0.0-M41\" }",
+                "{ \"group\": \"org.scala-lang\", \"artifact\": \"scala-library\", \"version\": \"2.13.12\" }",
+                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-core_2.13\", \"version\": \"1.0.0-M41\" }",
                 "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-ember-server_2.13\", \"version\": \"1.0.0-M41\" }",
                 "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-dsl_2.13\", \"version\": \"1.0.0-M41\" }",
-                "{ \"group\": \"org.http4s\", \"artifact\": \"http4s-circe_2.13\", \"version\": \"1.0.0-M41\" }",
                 "{ \"group\": \"io.circe\", \"artifact\": \"circe-core_2.13\", \"version\": \"0.14.7\" }",
-                "{ \"group\": \"io.circe\", \"artifact\": \"circe-generic_2.13\", \"version\": \"0.14.7\" }",
                 "{ \"group\": \"io.circe\", \"artifact\": \"circe-literal_2.13\", \"version\": \"0.14.7\" }",
                 "{ \"group\": \"org.typelevel\", \"artifact\": \"log4cats-slf4j_2.13\", \"version\": \"2.7.0\" }",
+                "{ \"group\": \"org.typelevel\", \"artifact\": \"log4cats-core_2.13\", \"version\": \"2.7.0\" }",
+                "{ \"group\": \"co.fs2\", \"artifact\": \"fs2-io_2.13\", \"version\": \"3.10.2\" }",
                 "{ \"group\": \"com.comcast\", \"artifact\": \"ip4s-core_2.13\", \"version\": \"3.5.0\" }"
               ],
               "fetch_sources": true,
@@ -6074,7 +5154,7 @@
               "generate_compat_repositories": false,
               "maven_install_json": "@@//:maven_install.json",
               "override_targets": {},
-              "strict_visibility": false,
+              "strict_visibility": true,
               "strict_visibility_value": [
                 "@@//visibility:private"
               ],
@@ -6119,17 +5199,6 @@
                 "https://repo1.maven.org/maven2/org/apache/maven/maven-plugin-api/3.9.6/maven-plugin-api-3.9.6-sources.jar"
               ],
               "downloaded_file_path": "v1/org/apache/maven/maven-plugin-api/3.9.6/maven-plugin-api-3.9.6-sources.jar"
-            }
-          },
-          "io_opentelemetry_opentelemetry_api_events_jar_sources_1_28_0_alpha": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "f5ddbfd63da988a2fd844d5d71366fd651ae7d19b69c929d710d897bb5ccc2b4",
-              "urls": [
-                "https://repo1.maven.org/maven2/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha-sources.jar"
-              ],
-              "downloaded_file_path": "v1/io/opentelemetry/opentelemetry-api-events/1.28.0-alpha/opentelemetry-api-events-1.28.0-alpha-sources.jar"
             }
           },
           "software_amazon_awssdk_netty_nio_client_jar_sources_2_25_23": {
@@ -6240,17 +5309,6 @@
                 "https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-annotations/2.17.0/jackson-annotations-2.17.0.jar"
               ],
               "downloaded_file_path": "v1/com/fasterxml/jackson/core/jackson-annotations/2.17.0/jackson-annotations-2.17.0.jar"
-            }
-          },
-          "org_seleniumhq_selenium_selenium_manager_4_16_1": {
-            "bzlFile": "@@bazel_tools//tools/build_defs/repo:http.bzl",
-            "ruleClassName": "http_file",
-            "attributes": {
-              "sha256": "4c341f112b5cbe896734749a4e051c55e6707fce1153ccc0f7018f800bd4c05f",
-              "urls": [
-                "https://repo1.maven.org/maven2/org/seleniumhq/selenium/selenium-manager/4.16.1/selenium-manager-4.16.1.jar"
-              ],
-              "downloaded_file_path": "v1/org/seleniumhq/selenium/selenium-manager/4.16.1/selenium-manager-4.16.1.jar"
             }
           },
           "io_grpc_grpc_netty_shaded_1_62_2": {
