@@ -12,12 +12,8 @@ scala_toolchain(
     name = "semanticdb_toolchain_impl",
     # scalac needs access to transitive deps
     # at compile time or it'll fail mysteriously.
-    #
-    # Note that this will still allow builds that
-    # implicitly depend on transitive deps to fail
-    # to compile as you'd want.
     dependency_mode = "transitive",
-    # Works extremely well, but as noted, not sure the cost of this vs regular AST mode
+    # Seems to work, but not sure the cost of this vs regular AST mode
     dependency_tracking_method = "ast-plus",
     enable_semanticdb = True,
     semanticdb_bundle_in_jar = False,
